@@ -1,139 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>6.字典</title>
-    <url>/2020/06/17/6.%E5%AD%97%E5%85%B8/</url>
-    <content><![CDATA[<h1 id="6-字典"><a href="#6-字典" class="headerlink" title="6.字典"></a>6.字典</h1><p>在<code>js</code>中有对象，在<code>py</code>中相应的就有字典</p>
-<h2 id="6-1-一个简单的字典"><a href="#6-1-一个简单的字典" class="headerlink" title="6.1  一个简单的字典"></a>6.1  一个简单的字典</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">alien_0=&#123;</span><br><span class="line">  <span class="string">'color'</span>:<span class="string">'green'</span>,</span><br><span class="line">  <span class="string">'points'</span>:<span class="number">5</span></span><br><span class="line">&#125;</span><br><span class="line">print(alien_0[<span class="string">'color'</span>])</span><br></pre></td></tr></table></figure>
-
-<h2 id="6-2-使用字典"><a href="#6-2-使用字典" class="headerlink" title="6.2  使用字典"></a>6.2  使用字典</h2><p>在<code>py</code>中，字典是一系列键值对，每个键都与一个值相关联，可以使用键访问与之相关的值，与键关联的值可以是数字、字符串、列表、字典；事实上，可以将<code>py</code>中任何数据用作字典的值</p>
-<h3 id="6-2-1-访问字典中的值"><a href="#6-2-1-访问字典中的值" class="headerlink" title="6.2.1  访问字典中的值"></a>6.2.1  访问字典中的值</h3><p><code>js</code>也有类似的方法，即方括号法</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">alien_0=&#123;</span><br><span class="line">  <span class="string">'color'</span>:<span class="string">'green'</span>,</span><br><span class="line">  <span class="string">'points'</span>:<span class="number">5</span></span><br><span class="line">&#125;</span><br><span class="line">alien_0[<span class="string">'color'</span>]</span><br><span class="line">alien_0[<span class="string">'points'</span>]</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-2-2-添加键值对"><a href="#6-2-2-添加键值对" class="headerlink" title="6.2.2  添加键值对"></a>6.2.2  添加键值对</h3><p>字典是动态的，可以随时在其中添加键值对</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">alien_0=&#123;</span><br><span class="line">  <span class="string">'color'</span>:<span class="string">'green'</span>,</span><br><span class="line">  <span class="string">'points'</span>:<span class="number">5</span></span><br><span class="line">&#125;</span><br><span class="line">alien_0[<span class="string">'x'</span>]=<span class="number">0</span></span><br><span class="line">alien_0[<span class="string">'y'</span>]=<span class="number">25</span></span><br></pre></td></tr></table></figure>
-
-<p>注意：字典不关心键值对的排序，只关心键与值之间的关联关系</p>
-<h3 id="6-2-3-先创建一个空字典"><a href="#6-2-3-先创建一个空字典" class="headerlink" title="6.2.3  先创建一个空字典"></a>6.2.3  先创建一个空字典</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">alien_0=&#123;&#125;</span><br><span class="line">alien_0[<span class="string">'color'</span>]=<span class="string">'grenn'</span></span><br><span class="line">alien_0[<span class="string">'points'</span>]=<span class="number">5</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="6-2-4-修改字典中的值"><a href="#6-2-4-修改字典中的值" class="headerlink" title="6.2.4  修改字典中的值"></a>6.2.4  修改字典中的值</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">alien_0=&#123;</span><br><span class="line">  <span class="string">'color'</span>:<span class="string">'green'</span></span><br><span class="line">&#125;</span><br><span class="line">alien_0[<span class="string">'color'</span>]=<span class="string">'yellow'</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="6-2-5-删除键值对"><a href="#6-2-5-删除键值对" class="headerlink" title="6.2.5  删除键值对"></a>6.2.5  删除键值对</h3><p>对于字典中不需要的信息，可以使用<code>del</code>语句删除该键值对</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">alien_0=&#123;</span><br><span class="line">  <span class="string">'color'</span>:<span class="string">'green'</span>,</span><br><span class="line">  <span class="string">'points'</span>:<span class="number">5</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">del</span> alien_0[<span class="string">'points'</span>]</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-2-6-由类似对象组成的字典"><a href="#6-2-6-由类似对象组成的字典" class="headerlink" title="6.2.6  由类似对象组成的字典"></a>6.2.6  由类似对象组成的字典</h3><p>字典可以存储一个对象的各种信息，也可以存储多个对象的同一种信息</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">favorite_languages=&#123;</span><br><span class="line">  <span class="string">'jen'</span>:<span class="string">'python'</span>,</span><br><span class="line">  <span class="string">'sarah'</span>:<span class="string">'c'</span>,</span><br><span class="line">  <span class="string">'edward'</span>:<span class="string">'ruby'</span>,</span><br><span class="line">  <span class="string">'phil'</span>:<span class="string">'python'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="6-3-遍历字典"><a href="#6-3-遍历字典" class="headerlink" title="6.3  遍历字典"></a>6.3  遍历字典</h2><p><code>py</code>字典可能只有几个键值对，也可能包含数百万个键值对，因此<code>py</code>支持对字典遍历，字典可用于以各种方式存储信息，因此有多种遍历字典的方式</p>
-<h3 id="6-3-1-遍历所有的键值对"><a href="#6-3-1-遍历所有的键值对" class="headerlink" title="6.3.1  遍历所有的键值对"></a>6.3.1  遍历所有的键值对</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">user=&#123;</span><br><span class="line">  <span class="string">'username'</span>:<span class="string">'efermi'</span>,</span><br><span class="line">  <span class="string">'first'</span>:<span class="string">'enrico'</span>,</span><br><span class="line">  <span class="string">'last'</span>:<span class="string">'fermi'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> key,value <span class="keyword">in</span> user.items():</span><br><span class="line">  print(key+<span class="string">':'</span>+value)</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-3-2-遍历字典中的所有键"><a href="#6-3-2-遍历字典中的所有键" class="headerlink" title="6.3.2  遍历字典中的所有键"></a>6.3.2  遍历字典中的所有键</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">favorite_languages=&#123;</span><br><span class="line">  <span class="string">'jen'</span>:<span class="string">'python'</span>,</span><br><span class="line">  <span class="string">'sarah'</span>:<span class="string">'c'</span>,</span><br><span class="line">  <span class="string">'edward'</span>:<span class="string">'ruby'</span>,</span><br><span class="line">  <span class="string">'phil'</span>:<span class="string">'python'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> favorite_languages.keys():</span><br><span class="line">  print(key)</span><br></pre></td></tr></table></figure>
-
-<p>遍历字典时，默认就是遍历字典所有的键</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">favorite_languages=&#123;</span><br><span class="line">  <span class="string">'jen'</span>:<span class="string">'python'</span>,</span><br><span class="line">  <span class="string">'sarah'</span>:<span class="string">'c'</span>,</span><br><span class="line">  <span class="string">'edward'</span>:<span class="string">'ruby'</span>,</span><br><span class="line">  <span class="string">'phil'</span>:<span class="string">'python'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> favorite_languages:</span><br><span class="line">  print(key)</span><br></pre></td></tr></table></figure>
-
-<p>因此，上面两个示例结果是一模一样的，但是采用<code>keys</code>方法更加让人容易理解</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">favorite_languages=&#123;</span><br><span class="line">  <span class="string">'jen'</span>:<span class="string">'python'</span>,</span><br><span class="line">  <span class="string">'sarah'</span>:<span class="string">'c'</span>,</span><br><span class="line">  <span class="string">'edward'</span>:<span class="string">'ruby'</span>,</span><br><span class="line">  <span class="string">'phil'</span>:<span class="string">'python'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> <span class="string">'erin'</span> <span class="keyword">not</span> <span class="keyword">in</span> favorite_languages.keys():</span><br><span class="line">  print(<span class="string">'erin not in dict'</span>)</span><br></pre></td></tr></table></figure>
-
-<p>方法<code>keys</code>并非只能用于遍历，它实际上返回一个列表，其中包含字典中所有的键</p>
-<h3 id="6-3-3-按顺序遍历字典中的所有键"><a href="#6-3-3-按顺序遍历字典中的所有键" class="headerlink" title="6.3.3  按顺序遍历字典中的所有键"></a>6.3.3  按顺序遍历字典中的所有键</h3><p>字典只关注键与值之间的关联关系，其实不关注顺序</p>
-<p>但是当我们遍历出字典的键列表之后，可以对键列表进行排序</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">favorite_languages=&#123;</span><br><span class="line">  <span class="string">'jen'</span>:<span class="string">'python'</span>,</span><br><span class="line">  <span class="string">'sarah'</span>:<span class="string">'c'</span>,</span><br><span class="line">  <span class="string">'edward'</span>:<span class="string">'ruby'</span>,</span><br><span class="line">  <span class="string">'phil'</span>:<span class="string">'python'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> sorted(favorite_languages.keys()):</span><br><span class="line">  print(key)</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-3-4-遍历字典中的所有值"><a href="#6-3-4-遍历字典中的所有值" class="headerlink" title="6.3.4  遍历字典中的所有值"></a>6.3.4  遍历字典中的所有值</h3><p>如果你感兴趣的主要是字典中的值，可以使用<code>values</code>方法，它返回一个值列表，而不包含任何键</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">favorite_languages=&#123;</span><br><span class="line">  <span class="string">'jen'</span>:<span class="string">'python'</span>,</span><br><span class="line">  <span class="string">'sarah'</span>:<span class="string">'c'</span>,</span><br><span class="line">  <span class="string">'edward'</span>:<span class="string">'ruby'</span>,</span><br><span class="line">  <span class="string">'phil'</span>:<span class="string">'python'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> value <span class="keyword">in</span> favorite_languages.values():</span><br><span class="line">  print(value)</span><br></pre></td></tr></table></figure>
-
-<p>这种做法提取字典中所有的值，而没有考虑重复的问题</p>
-<p>如果想要去重的话，可以使用集合，集合类似于列表，但是集合中每个元素都是独一无二，也就是去重</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">favorite_languages=&#123;</span><br><span class="line">  <span class="string">'jen'</span>:<span class="string">'python'</span>,</span><br><span class="line">  <span class="string">'sarah'</span>:<span class="string">'c'</span>,</span><br><span class="line">  <span class="string">'edward'</span>:<span class="string">'ruby'</span>,</span><br><span class="line">  <span class="string">'phil'</span>:<span class="string">'python'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> value <span class="keyword">in</span> set(favorite_languages.values()):</span><br><span class="line">  print(value)</span><br></pre></td></tr></table></figure>
-
-<h2 id="6-4-嵌套"><a href="#6-4-嵌套" class="headerlink" title="6.4  嵌套"></a>6.4  嵌套</h2><p>有时候，需要将一系列字典存储在列表中，或将列表作为值存储在字典中，这称为嵌套。</p>
-<h3 id="6-4-1-字典列表"><a href="#6-4-1-字典列表" class="headerlink" title="6.4.1  字典列表"></a>6.4.1  字典列表</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#创建一个存储外星人的列表</span></span><br><span class="line">aliens=[]</span><br><span class="line"><span class="comment">#for循环创建30个外星人</span></span><br><span class="line"><span class="keyword">for</span> num <span class="keyword">in</span> range(<span class="number">30</span>):</span><br><span class="line">  new_alien=&#123;</span><br><span class="line">    <span class="string">'color'</span>:<span class="string">'green'</span>,</span><br><span class="line">    <span class="string">'points'</span>:<span class="number">5</span>,</span><br><span class="line">    <span class="string">'speed'</span>:<span class="string">'slow'</span></span><br><span class="line">  &#125;</span><br><span class="line">  aliens.append(new_alien)</span><br><span class="line"><span class="comment">#遍历前五个外星人</span></span><br><span class="line"><span class="keyword">for</span> alien <span class="keyword">in</span> aliens[<span class="number">0</span>:<span class="number">5</span>]:</span><br><span class="line">  print(alien)</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-4-2-在字典中存储列表"><a href="#6-4-2-在字典中存储列表" class="headerlink" title="6.4.2  在字典中存储列表"></a>6.4.2  在字典中存储列表</h3><p>有时候，需要将列表存储在字典中</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pizza=&#123;</span><br><span class="line">  <span class="string">'crust'</span>:<span class="string">'thick'</span>,</span><br><span class="line">  <span class="string">'toppings'</span>:[<span class="string">'mushrooms'</span>,<span class="string">'extra cheese'</span>]</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> topping <span class="keyword">in</span> pizza[<span class="string">'toppings'</span>]:</span><br><span class="line">  print(topping)</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-4-3-在字典中存储字典"><a href="#6-4-3-在字典中存储字典" class="headerlink" title="6.4.3  在字典中存储字典"></a>6.4.3  在字典中存储字典</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">users=&#123;</span><br><span class="line">  <span class="string">'aeinstein'</span>:&#123;</span><br><span class="line">    <span class="string">'first'</span>:<span class="string">'albert'</span>,</span><br><span class="line">    <span class="string">'last'</span>:<span class="string">'einstein'</span>,</span><br><span class="line">    <span class="string">'location'</span>:<span class="string">'princeton'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">'mcurie'</span>:&#123;</span><br><span class="line">    <span class="string">'first'</span>:<span class="string">'marie'</span>,</span><br><span class="line">    <span class="string">'last'</span>:<span class="string">'curie'</span>,</span><br><span class="line">    <span class="string">'location'</span>:<span class="string">'paris'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Python编程从入门到实践</tag>
-        <tag>读书笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>10.文件和异常</title>
-    <url>/2020/06/24/10.%E6%96%87%E4%BB%B6%E5%92%8C%E5%BC%82%E5%B8%B8/</url>
-    <content><![CDATA[<h1 id="10-文件和异常"><a href="#10-文件和异常" class="headerlink" title="10.文件和异常"></a>10.文件和异常</h1><h2 id="10-1-从文件中读取数据"><a href="#10-1-从文件中读取数据" class="headerlink" title="10.1  从文件中读取数据"></a>10.1  从文件中读取数据</h2><p>文本文件可存储的数据量多的难以置信：天气数据、交通数据、社会经济数据、文学作品等；</p>
-<p>每当需要分析或修改存储在文件中的信息时，读取文件都很有用；</p>
-<p>要使用文本文件中的信息，首先需要将信息读取到内存中；</p>
-<p>为此，你可以一次性读取文件的全部内容，也可以以每次一行的方式逐步读取；</p>
-<h3 id="10-1-1-读取整个文件"><a href="#10-1-1-读取整个文件" class="headerlink" title="10.1.1  读取整个文件"></a>10.1.1  读取整个文件</h3><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">#pi_digits.txt</span><br><span class="line"><span class="number">3.1415926535</span></span><br><span class="line"><span class="number">8979323846</span></span><br><span class="line"><span class="number">2643383279</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'pi_digits.txt'</span>) <span class="keyword">as</span> file:</span><br><span class="line">  contents=file.read()</span><br><span class="line">  print(contents)</span><br></pre></td></tr></table></figure>
-
-<p><code>open</code>函数接收一个参数：要打开的文件的名称；<code>open</code>函数返回一个表示文件的对象；</p>
-<p>在这里，<code>open(&#39;pi_digits.txt&#39;)</code>返回一个表示文件<code>pi_digits.txt</code>的对象，<code>py</code>将这个对象存储在<code>file</code>变量中；</p>
-<p><code>with</code>关键字在不需要访问文件后将其关闭；在这个程序中，我们调用了<code>open</code>，但是没有<code>close</code>；你也可以通过<code>open</code>和<code>close</code>来打开和关闭文件，但是这样做有弊端，因为我们自己确定何时关闭文件流是有风险的，不如将这个动作委托给<code>py</code>来确定：我们只管打开文件，并在需要时使用它，<code>py</code>自会在合适的时候自动将其关闭；</p>
-<p><code>read</code>函数可以读取文件对象的全部内容，并将其作为一个长长的字符串存储在变量<code>contents</code>中，这样，通过使用<code>contents</code>，就可以处理文件的内容；</p>
-<p>相比于原始文件，<code>contents</code>中的内容末尾会多一个空行，这是因为<code>read</code>函数到达文件末尾时会返回一个空字符串，而将这个空字符串显示出来就是一个空行，要删除多出来的空行，可以使用<code>strip</code>方法；</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'pi_digits.txt'</span>) <span class="keyword">as</span> file:</span><br><span class="line">  contents=file.read()</span><br><span class="line">  print(contents.strip())</span><br></pre></td></tr></table></figure>
-
-<h3 id="10-1-2-文件路径"><a href="#10-1-2-文件路径" class="headerlink" title="10.1.2  文件路径"></a>10.1.2  文件路径</h3><p>将文件名传递给函数<code>open</code>时，<code>py</code>将在当前执行的文件所在的目录中查找文件；</p>
-<p>除此之外，还可以将相对路径或绝对路径传递给<code>open</code>函数；</p>
-<h3 id="10-1-3-逐行读取"><a href="#10-1-3-逐行读取" class="headerlink" title="10.1.3  逐行读取"></a>10.1.3  逐行读取</h3><p>读取文件时，常常需要检查其中的每一行，你可能要在文件中查找特定的信息，或者要以某种方式修改文件中的文本；</p>
-<p>要以每次一行的方式检查文件，可对文件对象使用<code>for</code>循环：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">filename=<span class="string">'pi_digits.txt'</span></span><br><span class="line"><span class="keyword">with</span> open(filename) <span class="keyword">as</span> file:</span><br><span class="line">  <span class="keyword">for</span> line <span class="keyword">in</span> file:</span><br><span class="line">    print(line)</span><br></pre></td></tr></table></figure>
-
-<p>打印出来的内容会出现更多的空白行；为什么呢？因为在文件中，每行的末尾都有一个看不见的换行符，而<code>print</code>语句也会加上一个换行符，因此每行末尾都有两个换行符：一个来自文件，一个来自<code>print</code>语句；</p>
-<p>要消除这些多余的空白行，可以使用<code>strip</code>方法：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">filename=<span class="string">'pi_digits.txt'</span></span><br><span class="line"><span class="keyword">with</span> open(filename) <span class="keyword">as</span> file:</span><br><span class="line">  <span class="keyword">for</span> line <span class="keyword">in</span> file:</span><br><span class="line">    print(line.strip())</span><br></pre></td></tr></table></figure>
-
-<h3 id="10-1-4-创建一个包含文件各行内容的列表"><a href="#10-1-4-创建一个包含文件各行内容的列表" class="headerlink" title="10.1.4  创建一个包含文件各行内容的列表"></a>10.1.4  创建一个包含文件各行内容的列表</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">filename=<span class="string">'pi_digits.txt'</span></span><br><span class="line"><span class="keyword">with</span> open(filename) <span class="keyword">as</span> file:</span><br><span class="line">  lines=file.readlines()</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> lines:</span><br><span class="line">  print(line.strip())</span><br></pre></td></tr></table></figure>
-
-<h3 id="10-1-5-使用文件的内容"><a href="#10-1-5-使用文件的内容" class="headerlink" title="10.1.5  使用文件的内容"></a>10.1.5  使用文件的内容</h3><p>将文件内容读取到内存中后，就可以以任何方式使用这些数据了；</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">filename=<span class="string">'pi_digits.txt'</span></span><br><span class="line"><span class="keyword">with</span> open(filenam) <span class="keyword">as</span> file:</span><br><span class="line">  lines=file.readlines()</span><br><span class="line">str=<span class="string">''</span></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> lines:</span><br><span class="line">  str+=line.strip()</span><br><span class="line">print(str)</span><br><span class="line">print(len(str))</span><br></pre></td></tr></table></figure>
-
-<p>注意：读取文本文件时，<code>py</code>将其中的所有文本都解读为字符串；如果你读取的是数字，并想将其作为数值使用，你就必须使用<code>int</code>函数将其转换为整数，或使用<code>float</code>函数将其转换为浮点数；</p>
-<h3 id="10-1-6-包含一百万位的大型文件"><a href="#10-1-6-包含一百万位的大型文件" class="headerlink" title="10.1.6  包含一百万位的大型文件"></a>10.1.6  包含一百万位的大型文件</h3><p><code>py</code>没有限制我们可以处理的数据量，只要系统的内存足够多，想处理多少数据都可以；</p>
-<h2 id="10-2-写入文件"><a href="#10-2-写入文件" class="headerlink" title="10.2  写入文件"></a>10.2  写入文件</h2><p>保存数据的最简单方式之一是将其写入到文件中；</p>
-<h3 id="10-2-1-写入空文件"><a href="#10-2-1-写入空文件" class="headerlink" title="10.2.1  写入空文件"></a>10.2.1  写入空文件</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">filename=<span class="string">'programming.txt'</span></span><br><span class="line"><span class="keyword">with</span> open(filename,<span class="string">'w'</span>) <span class="keyword">as</span> file:</span><br><span class="line">  file.write(<span class="string">'I love programming'</span>)</span><br></pre></td></tr></table></figure>
-
-<p>在这个示例中，调用<code>open</code>时提供了两个实参；</p>
-<p>第一个实参是要打开的文件的名称；</p>
-<p>第二个实参<code>w</code>是告诉<code>py</code>，我们要以写入模式打开这个文件；</p>
-<p>打开文件时，可指定读取模式<code>r</code>、写入模式<code>w</code>、附加模式<code>a</code>或让你能够读取和写入文件的<code>r+</code>，如果你省略了模式实参，<code>py</code>默认以读取模式打开文件；</p>
-<p>注意：<code>py</code>只能将字符串写入文本文件，要将数值数据存储到文本文件中，必须先使用函数<code>str</code>将其转换为字符串格式；</p>
-<h3 id="10-2-2-写入多行"><a href="#10-2-2-写入多行" class="headerlink" title="10.2.2  写入多行"></a>10.2.2  写入多行</h3><p><code>write</code>函数不会在你写入的文本末尾添加换行符，因此如果你写入多行时没有指定换行符，文件内容可能出乎你的意料；</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">filename=<span class="string">'programming.txt'</span></span><br><span class="line"><span class="keyword">with</span> open(filename,<span class="string">'w'</span>) <span class="keyword">as</span> file:</span><br><span class="line">  file.write(<span class="string">'I love programming.\n'</span>)</span><br><span class="line">  file.write(<span class="string">'I love creating new games.\n'</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="10-2-3-附加到文件"><a href="#10-2-3-附加到文件" class="headerlink" title="10.2.3  附加到文件"></a>10.2.3  附加到文件</h3><p>如果你要给文件添加内容，而不是覆盖原有的内容，可以以附加模式打开文件；</p>
-<p><code>py</code>不会在返回文件对象前清空文件，而你写入到文件的行都将添加到文件末尾；</p>
-<p>如果指定的文件不存在，<code>py</code>将为你创建一个空文件；</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">filename=<span class="string">'programming.txt'</span></span><br><span class="line"><span class="keyword">with</span> open(filename,<span class="string">'a'</span>) <span class="keyword">as</span> file:</span><br><span class="line">  file.write(<span class="string">'extra content.\n'</span>)</span><br></pre></td></tr></table></figure>
-
-<p>注意：如果以写入模式打开已有内容的文件，会清空掉原有内容，相当于覆盖重写，所以要确定好以哪种模式打开文件；</p>
-<h2 id="10-3-异常"><a href="#10-3-异常" class="headerlink" title="10.3  异常"></a>10.3  异常</h2><p><code>py</code>使用被称为异常的特殊对象来管理程序执行期间发生的错误；</p>
-<p>每当发生<code>py</code>不知所措的错误时，它都会创建一个异常对象；</p>
-<p>如果你编写了处理该异常的代码，程序将继续运行；</p>
-<p>如果你未对异常进行处理，程序将停止，并显示一个<code>traceback</code>，其中包含有关异常的报告；</p>
-<p>异常采用<code>try-except</code>代码块处理；</p>
-<p><code>try-except</code>代码块让<code>py</code>执行指定的操作，同时告诉<code>py</code>发生异常时怎么办；</p>
-<h3 id="10-3-1-处理ZeroDivisionError异常"><a href="#10-3-1-处理ZeroDivisionError异常" class="headerlink" title="10.3.1  处理ZeroDivisionError异常"></a>10.3.1  处理<code>ZeroDivisionError</code>异常</h3>]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Python编程从入门到实践</tag>
-        <tag>读书笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>3.列表简介</title>
     <url>/2020/06/10/3.%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/</url>
     <content><![CDATA[<h1 id="3-列表简介"><a href="#3-列表简介" class="headerlink" title="3.列表简介"></a>3.列表简介</h1><h2 id="3-1-列表是什么"><a href="#3-1-列表是什么" class="headerlink" title="3.1  列表是什么"></a>3.1  列表是什么</h2><p>列表由一系列按照特定顺序排列的元素组成，可以将任何东西放入列表，其中的元素之间可以没有任何关系；</p>
@@ -280,6 +147,71 @@
       </tags>
   </entry>
   <entry>
+    <title>6.字典</title>
+    <url>/2020/06/17/6.%E5%AD%97%E5%85%B8/</url>
+    <content><![CDATA[<h1 id="6-字典"><a href="#6-字典" class="headerlink" title="6.字典"></a>6.字典</h1><p>在<code>js</code>中有对象，在<code>py</code>中相应的就有字典</p>
+<h2 id="6-1-一个简单的字典"><a href="#6-1-一个简单的字典" class="headerlink" title="6.1  一个简单的字典"></a>6.1  一个简单的字典</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">alien_0=&#123;</span><br><span class="line">  <span class="string">'color'</span>:<span class="string">'green'</span>,</span><br><span class="line">  <span class="string">'points'</span>:<span class="number">5</span></span><br><span class="line">&#125;</span><br><span class="line">print(alien_0[<span class="string">'color'</span>])</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-2-使用字典"><a href="#6-2-使用字典" class="headerlink" title="6.2  使用字典"></a>6.2  使用字典</h2><p>在<code>py</code>中，字典是一系列键值对，每个键都与一个值相关联，可以使用键访问与之相关的值，与键关联的值可以是数字、字符串、列表、字典；事实上，可以将<code>py</code>中任何数据用作字典的值</p>
+<h3 id="6-2-1-访问字典中的值"><a href="#6-2-1-访问字典中的值" class="headerlink" title="6.2.1  访问字典中的值"></a>6.2.1  访问字典中的值</h3><p><code>js</code>也有类似的方法，即方括号法</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">alien_0=&#123;</span><br><span class="line">  <span class="string">'color'</span>:<span class="string">'green'</span>,</span><br><span class="line">  <span class="string">'points'</span>:<span class="number">5</span></span><br><span class="line">&#125;</span><br><span class="line">alien_0[<span class="string">'color'</span>]</span><br><span class="line">alien_0[<span class="string">'points'</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-2-2-添加键值对"><a href="#6-2-2-添加键值对" class="headerlink" title="6.2.2  添加键值对"></a>6.2.2  添加键值对</h3><p>字典是动态的，可以随时在其中添加键值对</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">alien_0=&#123;</span><br><span class="line">  <span class="string">'color'</span>:<span class="string">'green'</span>,</span><br><span class="line">  <span class="string">'points'</span>:<span class="number">5</span></span><br><span class="line">&#125;</span><br><span class="line">alien_0[<span class="string">'x'</span>]=<span class="number">0</span></span><br><span class="line">alien_0[<span class="string">'y'</span>]=<span class="number">25</span></span><br></pre></td></tr></table></figure>
+
+<p>注意：字典不关心键值对的排序，只关心键与值之间的关联关系</p>
+<h3 id="6-2-3-先创建一个空字典"><a href="#6-2-3-先创建一个空字典" class="headerlink" title="6.2.3  先创建一个空字典"></a>6.2.3  先创建一个空字典</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">alien_0=&#123;&#125;</span><br><span class="line">alien_0[<span class="string">'color'</span>]=<span class="string">'grenn'</span></span><br><span class="line">alien_0[<span class="string">'points'</span>]=<span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="6-2-4-修改字典中的值"><a href="#6-2-4-修改字典中的值" class="headerlink" title="6.2.4  修改字典中的值"></a>6.2.4  修改字典中的值</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">alien_0=&#123;</span><br><span class="line">  <span class="string">'color'</span>:<span class="string">'green'</span></span><br><span class="line">&#125;</span><br><span class="line">alien_0[<span class="string">'color'</span>]=<span class="string">'yellow'</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="6-2-5-删除键值对"><a href="#6-2-5-删除键值对" class="headerlink" title="6.2.5  删除键值对"></a>6.2.5  删除键值对</h3><p>对于字典中不需要的信息，可以使用<code>del</code>语句删除该键值对</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">alien_0=&#123;</span><br><span class="line">  <span class="string">'color'</span>:<span class="string">'green'</span>,</span><br><span class="line">  <span class="string">'points'</span>:<span class="number">5</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">del</span> alien_0[<span class="string">'points'</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-2-6-由类似对象组成的字典"><a href="#6-2-6-由类似对象组成的字典" class="headerlink" title="6.2.6  由类似对象组成的字典"></a>6.2.6  由类似对象组成的字典</h3><p>字典可以存储一个对象的各种信息，也可以存储多个对象的同一种信息</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">favorite_languages=&#123;</span><br><span class="line">  <span class="string">'jen'</span>:<span class="string">'python'</span>,</span><br><span class="line">  <span class="string">'sarah'</span>:<span class="string">'c'</span>,</span><br><span class="line">  <span class="string">'edward'</span>:<span class="string">'ruby'</span>,</span><br><span class="line">  <span class="string">'phil'</span>:<span class="string">'python'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-3-遍历字典"><a href="#6-3-遍历字典" class="headerlink" title="6.3  遍历字典"></a>6.3  遍历字典</h2><p><code>py</code>字典可能只有几个键值对，也可能包含数百万个键值对，因此<code>py</code>支持对字典遍历，字典可用于以各种方式存储信息，因此有多种遍历字典的方式</p>
+<h3 id="6-3-1-遍历所有的键值对"><a href="#6-3-1-遍历所有的键值对" class="headerlink" title="6.3.1  遍历所有的键值对"></a>6.3.1  遍历所有的键值对</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">user=&#123;</span><br><span class="line">  <span class="string">'username'</span>:<span class="string">'efermi'</span>,</span><br><span class="line">  <span class="string">'first'</span>:<span class="string">'enrico'</span>,</span><br><span class="line">  <span class="string">'last'</span>:<span class="string">'fermi'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> key,value <span class="keyword">in</span> user.items():</span><br><span class="line">  print(key+<span class="string">':'</span>+value)</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-3-2-遍历字典中的所有键"><a href="#6-3-2-遍历字典中的所有键" class="headerlink" title="6.3.2  遍历字典中的所有键"></a>6.3.2  遍历字典中的所有键</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">favorite_languages=&#123;</span><br><span class="line">  <span class="string">'jen'</span>:<span class="string">'python'</span>,</span><br><span class="line">  <span class="string">'sarah'</span>:<span class="string">'c'</span>,</span><br><span class="line">  <span class="string">'edward'</span>:<span class="string">'ruby'</span>,</span><br><span class="line">  <span class="string">'phil'</span>:<span class="string">'python'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> favorite_languages.keys():</span><br><span class="line">  print(key)</span><br></pre></td></tr></table></figure>
+
+<p>遍历字典时，默认就是遍历字典所有的键</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">favorite_languages=&#123;</span><br><span class="line">  <span class="string">'jen'</span>:<span class="string">'python'</span>,</span><br><span class="line">  <span class="string">'sarah'</span>:<span class="string">'c'</span>,</span><br><span class="line">  <span class="string">'edward'</span>:<span class="string">'ruby'</span>,</span><br><span class="line">  <span class="string">'phil'</span>:<span class="string">'python'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> favorite_languages:</span><br><span class="line">  print(key)</span><br></pre></td></tr></table></figure>
+
+<p>因此，上面两个示例结果是一模一样的，但是采用<code>keys</code>方法更加让人容易理解</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">favorite_languages=&#123;</span><br><span class="line">  <span class="string">'jen'</span>:<span class="string">'python'</span>,</span><br><span class="line">  <span class="string">'sarah'</span>:<span class="string">'c'</span>,</span><br><span class="line">  <span class="string">'edward'</span>:<span class="string">'ruby'</span>,</span><br><span class="line">  <span class="string">'phil'</span>:<span class="string">'python'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> <span class="string">'erin'</span> <span class="keyword">not</span> <span class="keyword">in</span> favorite_languages.keys():</span><br><span class="line">  print(<span class="string">'erin not in dict'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>方法<code>keys</code>并非只能用于遍历，它实际上返回一个列表，其中包含字典中所有的键</p>
+<h3 id="6-3-3-按顺序遍历字典中的所有键"><a href="#6-3-3-按顺序遍历字典中的所有键" class="headerlink" title="6.3.3  按顺序遍历字典中的所有键"></a>6.3.3  按顺序遍历字典中的所有键</h3><p>字典只关注键与值之间的关联关系，其实不关注顺序</p>
+<p>但是当我们遍历出字典的键列表之后，可以对键列表进行排序</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">favorite_languages=&#123;</span><br><span class="line">  <span class="string">'jen'</span>:<span class="string">'python'</span>,</span><br><span class="line">  <span class="string">'sarah'</span>:<span class="string">'c'</span>,</span><br><span class="line">  <span class="string">'edward'</span>:<span class="string">'ruby'</span>,</span><br><span class="line">  <span class="string">'phil'</span>:<span class="string">'python'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> sorted(favorite_languages.keys()):</span><br><span class="line">  print(key)</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-3-4-遍历字典中的所有值"><a href="#6-3-4-遍历字典中的所有值" class="headerlink" title="6.3.4  遍历字典中的所有值"></a>6.3.4  遍历字典中的所有值</h3><p>如果你感兴趣的主要是字典中的值，可以使用<code>values</code>方法，它返回一个值列表，而不包含任何键</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">favorite_languages=&#123;</span><br><span class="line">  <span class="string">'jen'</span>:<span class="string">'python'</span>,</span><br><span class="line">  <span class="string">'sarah'</span>:<span class="string">'c'</span>,</span><br><span class="line">  <span class="string">'edward'</span>:<span class="string">'ruby'</span>,</span><br><span class="line">  <span class="string">'phil'</span>:<span class="string">'python'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> value <span class="keyword">in</span> favorite_languages.values():</span><br><span class="line">  print(value)</span><br></pre></td></tr></table></figure>
+
+<p>这种做法提取字典中所有的值，而没有考虑重复的问题</p>
+<p>如果想要去重的话，可以使用集合，集合类似于列表，但是集合中每个元素都是独一无二，也就是去重</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">favorite_languages=&#123;</span><br><span class="line">  <span class="string">'jen'</span>:<span class="string">'python'</span>,</span><br><span class="line">  <span class="string">'sarah'</span>:<span class="string">'c'</span>,</span><br><span class="line">  <span class="string">'edward'</span>:<span class="string">'ruby'</span>,</span><br><span class="line">  <span class="string">'phil'</span>:<span class="string">'python'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> value <span class="keyword">in</span> set(favorite_languages.values()):</span><br><span class="line">  print(value)</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-4-嵌套"><a href="#6-4-嵌套" class="headerlink" title="6.4  嵌套"></a>6.4  嵌套</h2><p>有时候，需要将一系列字典存储在列表中，或将列表作为值存储在字典中，这称为嵌套。</p>
+<h3 id="6-4-1-字典列表"><a href="#6-4-1-字典列表" class="headerlink" title="6.4.1  字典列表"></a>6.4.1  字典列表</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#创建一个存储外星人的列表</span></span><br><span class="line">aliens=[]</span><br><span class="line"><span class="comment">#for循环创建30个外星人</span></span><br><span class="line"><span class="keyword">for</span> num <span class="keyword">in</span> range(<span class="number">30</span>):</span><br><span class="line">  new_alien=&#123;</span><br><span class="line">    <span class="string">'color'</span>:<span class="string">'green'</span>,</span><br><span class="line">    <span class="string">'points'</span>:<span class="number">5</span>,</span><br><span class="line">    <span class="string">'speed'</span>:<span class="string">'slow'</span></span><br><span class="line">  &#125;</span><br><span class="line">  aliens.append(new_alien)</span><br><span class="line"><span class="comment">#遍历前五个外星人</span></span><br><span class="line"><span class="keyword">for</span> alien <span class="keyword">in</span> aliens[<span class="number">0</span>:<span class="number">5</span>]:</span><br><span class="line">  print(alien)</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-4-2-在字典中存储列表"><a href="#6-4-2-在字典中存储列表" class="headerlink" title="6.4.2  在字典中存储列表"></a>6.4.2  在字典中存储列表</h3><p>有时候，需要将列表存储在字典中</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pizza=&#123;</span><br><span class="line">  <span class="string">'crust'</span>:<span class="string">'thick'</span>,</span><br><span class="line">  <span class="string">'toppings'</span>:[<span class="string">'mushrooms'</span>,<span class="string">'extra cheese'</span>]</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> topping <span class="keyword">in</span> pizza[<span class="string">'toppings'</span>]:</span><br><span class="line">  print(topping)</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-4-3-在字典中存储字典"><a href="#6-4-3-在字典中存储字典" class="headerlink" title="6.4.3  在字典中存储字典"></a>6.4.3  在字典中存储字典</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">users=&#123;</span><br><span class="line">  <span class="string">'aeinstein'</span>:&#123;</span><br><span class="line">    <span class="string">'first'</span>:<span class="string">'albert'</span>,</span><br><span class="line">    <span class="string">'last'</span>:<span class="string">'einstein'</span>,</span><br><span class="line">    <span class="string">'location'</span>:<span class="string">'princeton'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">'mcurie'</span>:&#123;</span><br><span class="line">    <span class="string">'first'</span>:<span class="string">'marie'</span>,</span><br><span class="line">    <span class="string">'last'</span>:<span class="string">'curie'</span>,</span><br><span class="line">    <span class="string">'location'</span>:<span class="string">'paris'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Python编程从入门到实践</tag>
+        <tag>读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>5.if语句</title>
     <url>/2020/06/16/5.if%E8%AF%AD%E5%8F%A5/</url>
     <content><![CDATA[<h1 id="5-if语句"><a href="#5-if语句" class="headerlink" title="5.if语句"></a>5.if语句</h1><h2 id="5-1-一个简单示例"><a href="#5-1-一个简单示例" class="headerlink" title="5.1  一个简单示例"></a>5.1  一个简单示例</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars=[<span class="string">'audi'</span>,<span class="string">'bmw'</span>,<span class="string">'subaru'</span>,<span class="string">'toyata'</span>]</span><br><span class="line"><span class="keyword">for</span> car <span class="keyword">in</span> cars:</span><br><span class="line">  <span class="keyword">if</span> car==<span class="string">'bmw'</span>:</span><br><span class="line">    print(car.upper())</span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    print(car.title())</span><br></pre></td></tr></table></figure>
@@ -344,6 +276,74 @@
 
 <h2 id="5-5-设置-if-语句的格式"><a href="#5-5-设置-if-语句的格式" class="headerlink" title="5.5  设置 if 语句的格式"></a>5.5  设置 if 语句的格式</h2><p><code>PEP 8</code>建议在比较运算符<code>==</code>、<code>&lt;=</code>、<code>&gt;=</code>等两边各添加一个空格，提供代码可读性</p>
 ]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Python编程从入门到实践</tag>
+        <tag>读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>10.文件和异常</title>
+    <url>/2020/06/24/10.%E6%96%87%E4%BB%B6%E5%92%8C%E5%BC%82%E5%B8%B8/</url>
+    <content><![CDATA[<h1 id="10-文件和异常"><a href="#10-文件和异常" class="headerlink" title="10.文件和异常"></a>10.文件和异常</h1><h2 id="10-1-从文件中读取数据"><a href="#10-1-从文件中读取数据" class="headerlink" title="10.1  从文件中读取数据"></a>10.1  从文件中读取数据</h2><p>文本文件可存储的数据量多的难以置信：天气数据、交通数据、社会经济数据、文学作品等；</p>
+<p>每当需要分析或修改存储在文件中的信息时，读取文件都很有用；</p>
+<p>要使用文本文件中的信息，首先需要将信息读取到内存中；</p>
+<p>为此，你可以一次性读取文件的全部内容，也可以以每次一行的方式逐步读取；</p>
+<h3 id="10-1-1-读取整个文件"><a href="#10-1-1-读取整个文件" class="headerlink" title="10.1.1  读取整个文件"></a>10.1.1  读取整个文件</h3><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">#pi_digits.txt</span><br><span class="line"><span class="number">3.1415926535</span></span><br><span class="line"><span class="number">8979323846</span></span><br><span class="line"><span class="number">2643383279</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'pi_digits.txt'</span>) <span class="keyword">as</span> file:</span><br><span class="line">  contents=file.read()</span><br><span class="line">  print(contents)</span><br></pre></td></tr></table></figure>
+
+<p><code>open</code>函数接收一个参数：要打开的文件的名称；<code>open</code>函数返回一个表示文件的对象；</p>
+<p>在这里，<code>open(&#39;pi_digits.txt&#39;)</code>返回一个表示文件<code>pi_digits.txt</code>的对象，<code>py</code>将这个对象存储在<code>file</code>变量中；</p>
+<p><code>with</code>关键字在不需要访问文件后将其关闭；在这个程序中，我们调用了<code>open</code>，但是没有<code>close</code>；你也可以通过<code>open</code>和<code>close</code>来打开和关闭文件，但是这样做有弊端，因为我们自己确定何时关闭文件流是有风险的，不如将这个动作委托给<code>py</code>来确定：我们只管打开文件，并在需要时使用它，<code>py</code>自会在合适的时候自动将其关闭；</p>
+<p><code>read</code>函数可以读取文件对象的全部内容，并将其作为一个长长的字符串存储在变量<code>contents</code>中，这样，通过使用<code>contents</code>，就可以处理文件的内容；</p>
+<p>相比于原始文件，<code>contents</code>中的内容末尾会多一个空行，这是因为<code>read</code>函数到达文件末尾时会返回一个空字符串，而将这个空字符串显示出来就是一个空行，要删除多出来的空行，可以使用<code>strip</code>方法；</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'pi_digits.txt'</span>) <span class="keyword">as</span> file:</span><br><span class="line">  contents=file.read()</span><br><span class="line">  print(contents.strip())</span><br></pre></td></tr></table></figure>
+
+<h3 id="10-1-2-文件路径"><a href="#10-1-2-文件路径" class="headerlink" title="10.1.2  文件路径"></a>10.1.2  文件路径</h3><p>将文件名传递给函数<code>open</code>时，<code>py</code>将在当前执行的文件所在的目录中查找文件；</p>
+<p>除此之外，还可以将相对路径或绝对路径传递给<code>open</code>函数；</p>
+<h3 id="10-1-3-逐行读取"><a href="#10-1-3-逐行读取" class="headerlink" title="10.1.3  逐行读取"></a>10.1.3  逐行读取</h3><p>读取文件时，常常需要检查其中的每一行，你可能要在文件中查找特定的信息，或者要以某种方式修改文件中的文本；</p>
+<p>要以每次一行的方式检查文件，可对文件对象使用<code>for</code>循环：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">filename=<span class="string">'pi_digits.txt'</span></span><br><span class="line"><span class="keyword">with</span> open(filename) <span class="keyword">as</span> file:</span><br><span class="line">  <span class="keyword">for</span> line <span class="keyword">in</span> file:</span><br><span class="line">    print(line)</span><br></pre></td></tr></table></figure>
+
+<p>打印出来的内容会出现更多的空白行；为什么呢？因为在文件中，每行的末尾都有一个看不见的换行符，而<code>print</code>语句也会加上一个换行符，因此每行末尾都有两个换行符：一个来自文件，一个来自<code>print</code>语句；</p>
+<p>要消除这些多余的空白行，可以使用<code>strip</code>方法：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">filename=<span class="string">'pi_digits.txt'</span></span><br><span class="line"><span class="keyword">with</span> open(filename) <span class="keyword">as</span> file:</span><br><span class="line">  <span class="keyword">for</span> line <span class="keyword">in</span> file:</span><br><span class="line">    print(line.strip())</span><br></pre></td></tr></table></figure>
+
+<h3 id="10-1-4-创建一个包含文件各行内容的列表"><a href="#10-1-4-创建一个包含文件各行内容的列表" class="headerlink" title="10.1.4  创建一个包含文件各行内容的列表"></a>10.1.4  创建一个包含文件各行内容的列表</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">filename=<span class="string">'pi_digits.txt'</span></span><br><span class="line"><span class="keyword">with</span> open(filename) <span class="keyword">as</span> file:</span><br><span class="line">  lines=file.readlines()</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> lines:</span><br><span class="line">  print(line.strip())</span><br></pre></td></tr></table></figure>
+
+<h3 id="10-1-5-使用文件的内容"><a href="#10-1-5-使用文件的内容" class="headerlink" title="10.1.5  使用文件的内容"></a>10.1.5  使用文件的内容</h3><p>将文件内容读取到内存中后，就可以以任何方式使用这些数据了；</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">filename=<span class="string">'pi_digits.txt'</span></span><br><span class="line"><span class="keyword">with</span> open(filenam) <span class="keyword">as</span> file:</span><br><span class="line">  lines=file.readlines()</span><br><span class="line">str=<span class="string">''</span></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> lines:</span><br><span class="line">  str+=line.strip()</span><br><span class="line">print(str)</span><br><span class="line">print(len(str))</span><br></pre></td></tr></table></figure>
+
+<p>注意：读取文本文件时，<code>py</code>将其中的所有文本都解读为字符串；如果你读取的是数字，并想将其作为数值使用，你就必须使用<code>int</code>函数将其转换为整数，或使用<code>float</code>函数将其转换为浮点数；</p>
+<h3 id="10-1-6-包含一百万位的大型文件"><a href="#10-1-6-包含一百万位的大型文件" class="headerlink" title="10.1.6  包含一百万位的大型文件"></a>10.1.6  包含一百万位的大型文件</h3><p><code>py</code>没有限制我们可以处理的数据量，只要系统的内存足够多，想处理多少数据都可以；</p>
+<h2 id="10-2-写入文件"><a href="#10-2-写入文件" class="headerlink" title="10.2  写入文件"></a>10.2  写入文件</h2><p>保存数据的最简单方式之一是将其写入到文件中；</p>
+<h3 id="10-2-1-写入空文件"><a href="#10-2-1-写入空文件" class="headerlink" title="10.2.1  写入空文件"></a>10.2.1  写入空文件</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">filename=<span class="string">'programming.txt'</span></span><br><span class="line"><span class="keyword">with</span> open(filename,<span class="string">'w'</span>) <span class="keyword">as</span> file:</span><br><span class="line">  file.write(<span class="string">'I love programming'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>在这个示例中，调用<code>open</code>时提供了两个实参；</p>
+<p>第一个实参是要打开的文件的名称；</p>
+<p>第二个实参<code>w</code>是告诉<code>py</code>，我们要以写入模式打开这个文件；</p>
+<p>打开文件时，可指定读取模式<code>r</code>、写入模式<code>w</code>、附加模式<code>a</code>或让你能够读取和写入文件的<code>r+</code>，如果你省略了模式实参，<code>py</code>默认以读取模式打开文件；</p>
+<p>注意：<code>py</code>只能将字符串写入文本文件，要将数值数据存储到文本文件中，必须先使用函数<code>str</code>将其转换为字符串格式；</p>
+<h3 id="10-2-2-写入多行"><a href="#10-2-2-写入多行" class="headerlink" title="10.2.2  写入多行"></a>10.2.2  写入多行</h3><p><code>write</code>函数不会在你写入的文本末尾添加换行符，因此如果你写入多行时没有指定换行符，文件内容可能出乎你的意料；</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">filename=<span class="string">'programming.txt'</span></span><br><span class="line"><span class="keyword">with</span> open(filename,<span class="string">'w'</span>) <span class="keyword">as</span> file:</span><br><span class="line">  file.write(<span class="string">'I love programming.\n'</span>)</span><br><span class="line">  file.write(<span class="string">'I love creating new games.\n'</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="10-2-3-附加到文件"><a href="#10-2-3-附加到文件" class="headerlink" title="10.2.3  附加到文件"></a>10.2.3  附加到文件</h3><p>如果你要给文件添加内容，而不是覆盖原有的内容，可以以附加模式打开文件；</p>
+<p><code>py</code>不会在返回文件对象前清空文件，而你写入到文件的行都将添加到文件末尾；</p>
+<p>如果指定的文件不存在，<code>py</code>将为你创建一个空文件；</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">filename=<span class="string">'programming.txt'</span></span><br><span class="line"><span class="keyword">with</span> open(filename,<span class="string">'a'</span>) <span class="keyword">as</span> file:</span><br><span class="line">  file.write(<span class="string">'extra content.\n'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>注意：如果以写入模式打开已有内容的文件，会清空掉原有内容，相当于覆盖重写，所以要确定好以哪种模式打开文件；</p>
+<h2 id="10-3-异常"><a href="#10-3-异常" class="headerlink" title="10.3  异常"></a>10.3  异常</h2><p><code>py</code>使用被称为异常的特殊对象来管理程序执行期间发生的错误；</p>
+<p>每当发生<code>py</code>不知所措的错误时，它都会创建一个异常对象；</p>
+<p>如果你编写了处理该异常的代码，程序将继续运行；</p>
+<p>如果你未对异常进行处理，程序将停止，并显示一个<code>traceback</code>，其中包含有关异常的报告；</p>
+<p>异常采用<code>try-except</code>代码块处理；</p>
+<p><code>try-except</code>代码块让<code>py</code>执行指定的操作，同时告诉<code>py</code>发生异常时怎么办；</p>
+<h3 id="10-3-1-处理ZeroDivisionError异常"><a href="#10-3-1-处理ZeroDivisionError异常" class="headerlink" title="10.3.1  处理ZeroDivisionError异常"></a>10.3.1  处理<code>ZeroDivisionError</code>异常</h3>]]></content>
       <categories>
         <category>Python</category>
       </categories>
@@ -481,62 +481,6 @@
       </tags>
   </entry>
   <entry>
-    <title>7.用户输入和while循环</title>
-    <url>/2020/06/19/7.%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5%E5%92%8Cwhile%E5%BE%AA%E7%8E%AF/</url>
-    <content><![CDATA[<h1 id="7-用户输入和while循环"><a href="#7-用户输入和while循环" class="headerlink" title="7.用户输入和while循环"></a>7.用户输入和while循环</h1><h2 id="7-1-函数input的工作原理"><a href="#7-1-函数input的工作原理" class="headerlink" title="7.1  函数input的工作原理"></a>7.1  函数input的工作原理</h2><p>函数<code>input</code>让程序暂停运行，等待用户输入一些文本，获取用户输入后，<code>py</code>将其存储在一个变量中，以方便使用</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">message=input(<span class="string">'Tell me something,and i will repeat it back to you:'</span>)</span><br><span class="line">print(message)</span><br></pre></td></tr></table></figure>
-
-<h3 id="7-1-1-编写清晰的程序"><a href="#7-1-1-编写清晰的程序" class="headerlink" title="7.1.1  编写清晰的程序"></a>7.1.1  编写清晰的程序</h3><p>每次当你使用<code>input</code>函数时，都应指定清晰而易于明白的提示，准确的指出你希望用户提供什么样的信息</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">name=input(<span class="string">'please enter your name: '</span>)</span><br><span class="line">print(<span class="string">'hello, '</span>+name+<span class="string">'!'</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="7-1-2-使用int来获取数值输入"><a href="#7-1-2-使用int来获取数值输入" class="headerlink" title="7.1.2  使用int来获取数值输入"></a>7.1.2  使用int来获取数值输入</h3><p>使用函数<code>input</code>，<code>py</code>将用户输入解读为字符串</p>
-<p>使用函数<code>int</code>可以将字符串转换为数值</p>
-<h3 id="7-1-3-求模运算符"><a href="#7-1-3-求模运算符" class="headerlink" title="7.1.3  求模运算符"></a>7.1.3  求模运算符</h3><p>处理数值信息时，求模运算符<code>%</code>是一个很有用的工具，它将两个数相除并返回余数</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">4</span>%<span class="number">3</span></span><br><span class="line"><span class="comment">#1</span></span><br><span class="line"><span class="number">5</span>%<span class="number">3</span></span><br><span class="line"><span class="comment">#2</span></span><br><span class="line"><span class="number">6</span>%<span class="number">3</span></span><br><span class="line"><span class="comment">#0</span></span><br><span class="line"><span class="number">7</span>%<span class="number">3</span></span><br><span class="line"><span class="comment">#1</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="7-1-4-在python2-7中获取输入"><a href="#7-1-4-在python2-7中获取输入" class="headerlink" title="7.1.4  在python2.7中获取输入"></a>7.1.4  在python2.7中获取输入</h3><p>如果你使用的是<code>py2.7</code>，应该使用函数<code>raw_input</code>来提示用户输入，该函数与<code>py3</code>中的<code>input</code>一样，也将输入解读为字符串</p>
-<p><code>py2.7</code>中也有函数<code>input</code>，但是它会将用户的输入解读为<code>py</code>代码，并尝试运行它们</p>
-<p>因此，最好使用<code>raw_input</code>防止未知错误</p>
-<h2 id="7-2-while循环简介"><a href="#7-2-while循环简介" class="headerlink" title="7.2  while循环简介"></a>7.2  while循环简介</h2><p><code>for</code>循环用于针对集合中的每一个元素运行一个代码块，而<code>while</code>循环不断的运行，直到指定的条件不满足为止</p>
-<h3 id="7-2-1-使用while循环"><a href="#7-2-1-使用while循环" class="headerlink" title="7.2.1  使用while循环"></a>7.2.1  使用while循环</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">num=<span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> num&lt;=<span class="number">5</span>:</span><br><span class="line">  print(num)</span><br><span class="line">  num+=<span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="7-2-2-让用户选择何时退出"><a href="#7-2-2-让用户选择何时退出" class="headerlink" title="7.2.2  让用户选择何时退出"></a>7.2.2  让用户选择何时退出</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">message=<span class="string">''</span></span><br><span class="line"><span class="keyword">while</span> message!=<span class="string">'quit'</span>:</span><br><span class="line">  message=input(<span class="string">'are you sure quit?'</span>)</span><br><span class="line">  print(message)</span><br></pre></td></tr></table></figure>
-
-<h3 id="7-2-3-使用标志"><a href="#7-2-3-使用标志" class="headerlink" title="7.2.3  使用标志"></a>7.2.3  使用标志</h3><p>假如有多种原因导致程序无法继续执行下去，如果要在<code>while</code>语句中一一检查这些条件很麻烦且复杂，我们可以使用一个变量，用于判断整个程序是否可以继续运行下去，这个变量就叫做标志</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">active=<span class="literal">True</span></span><br><span class="line"><span class="keyword">while</span> active:</span><br><span class="line">  message=input(<span class="string">'please input something'</span>)</span><br><span class="line">  <span class="keyword">if</span> message=<span class="string">'quit'</span>:</span><br><span class="line">    active=<span class="literal">False</span></span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    print(message)</span><br></pre></td></tr></table></figure>
-
-<h3 id="7-2-4-使用break退出循环"><a href="#7-2-4-使用break退出循环" class="headerlink" title="7.2.4  使用break退出循环"></a>7.2.4  使用break退出循环</h3><p>要立刻退出<code>while</code>循环，不再运行循环中余下的代码，也不管条件测试的结果如何，可以使用<code>break</code>语句</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">  message=input(<span class="string">'please input something'</span>)</span><br><span class="line">  <span class="keyword">if</span> message=<span class="string">'quit'</span>:</span><br><span class="line">    <span class="keyword">break</span></span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    print(message)</span><br></pre></td></tr></table></figure>
-
-<p>注意：在任何<code>py</code>循环中都可以使用<code>break</code>语句，包括<code>for</code>循环或者列表遍历</p>
-<h3 id="7-2-5-在循环中使用continue"><a href="#7-2-5-在循环中使用continue" class="headerlink" title="7.2.5  在循环中使用continue"></a>7.2.5  在循环中使用continue</h3><p><code>continue</code>在循环中的作用就是跳过本轮循环，直接到下一次循环</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cur_num=<span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> cur_num&lt;<span class="number">10</span>:</span><br><span class="line">  cur_num+=<span class="number">1</span></span><br><span class="line">  <span class="keyword">if</span>(cur_num%<span class="number">2</span>==<span class="number">0</span>):</span><br><span class="line">    <span class="keyword">continue</span></span><br><span class="line">  print(cur_num)</span><br></pre></td></tr></table></figure>
-
-<h3 id="7-2-6-避免无限循环"><a href="#7-2-6-避免无限循环" class="headerlink" title="7.2.6  避免无限循环"></a>7.2.6  避免无限循环</h3><p>每个<code>while</code>循环都必须有停止运行的途径，否则会无限循环</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x=<span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> x&lt;=<span class="number">5</span>:</span><br><span class="line">  print(x)</span><br></pre></td></tr></table></figure>
-
-<p>因此很有必要对退出循环的条件小心再小心，避免无限循环</p>
-<h2 id="7-3-使用while循环来处理列表和字典"><a href="#7-3-使用while循环来处理列表和字典" class="headerlink" title="7.3  使用while循环来处理列表和字典"></a>7.3  使用while循环来处理列表和字典</h2><p><code>for</code>循环是一种遍历列表的有效方式，但是在<code>for</code>循环中不应修改列表，否则将导致<code>py</code>难以跟踪其中的元素</p>
-<p>要在遍历列表的同时对其进行修改，可以使用<code>while</code>循环</p>
-<h3 id="7-3-1-在列表之间移动元素"><a href="#7-3-1-在列表之间移动元素" class="headerlink" title="7.3.1  在列表之间移动元素"></a>7.3.1  在列表之间移动元素</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#首先创建一个待验证用户列表</span></span><br><span class="line"><span class="comment">#和一个用于存储已验证用户的空列表</span></span><br><span class="line">unconfirmed_users=[<span class="string">'alice'</span>,<span class="string">'brian'</span>,<span class="string">'candace'</span>]</span><br><span class="line">confirmed_users=[]</span><br><span class="line"><span class="comment">#验证每个用户，直到没有未验证用户为止</span></span><br><span class="line"><span class="comment">#将每个经过验证的用户都移到已验证用户列表中</span></span><br><span class="line"><span class="keyword">while</span> unconfirmed_users:</span><br><span class="line">  cur_user=unconfirmed_users.pop()</span><br><span class="line">  print(<span class="string">'verifying user:'</span>+cur_user.title())</span><br><span class="line">  confirmed_users.append(cur_user)</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> confirmed_users:</span><br><span class="line">  print(item.title())</span><br></pre></td></tr></table></figure>
-
-<h3 id="7-3-2-删除包含特定值的所有列表元素"><a href="#7-3-2-删除包含特定值的所有列表元素" class="headerlink" title="7.3.2  删除包含特定值的所有列表元素"></a>7.3.2  删除包含特定值的所有列表元素</h3><p>我们可以使用<code>remove</code>方法来删除列表中的特定值，但是该方法只会删除一次</p>
-<p>如果要删除列表中所有的特定值，应该这样：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pets=[<span class="string">'dog'</span>,<span class="string">'cat'</span>,<span class="string">'dog'</span>,<span class="string">'goldfish'</span>,<span class="string">'cat'</span>,<span class="string">'rabbit'</span>,<span class="string">'cat'</span>]</span><br><span class="line"><span class="keyword">while</span> <span class="string">'cat'</span> <span class="keyword">in</span> pets:</span><br><span class="line">  pets.remove(<span class="string">'cat'</span>)</span><br><span class="line">print(pets)</span><br></pre></td></tr></table></figure>
-
-<h3 id="7-3-3-使用用户输入来填充字典"><a href="#7-3-3-使用用户输入来填充字典" class="headerlink" title="7.3.3  使用用户输入来填充字典"></a>7.3.3  使用用户输入来填充字典</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">res=&#123;&#125;</span><br><span class="line">flag=<span class="literal">True</span></span><br><span class="line"><span class="keyword">while</span> flag:</span><br><span class="line">  name=input(<span class="string">'please input your name'</span>)</span><br><span class="line">  result=input(<span class="string">'please input your result'</span>)</span><br><span class="line">  res[name]=result</span><br><span class="line">  repeat=input(<span class="string">'would you like to again,yes/no?'</span>)</span><br><span class="line">  <span class="keyword">if</span> repeat==<span class="string">'no'</span>:</span><br><span class="line">    flag=<span class="literal">False</span></span><br><span class="line">print(<span class="string">"it's over"</span>)</span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> res:</span><br><span class="line">  print(key+<span class="string">':'</span>+res[key])</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Python编程从入门到实践</tag>
-        <tag>读书笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>9.类</title>
     <url>/2020/06/23/9.%E7%B1%BB/</url>
     <content><![CDATA[<h1 id="9-类"><a href="#9-类" class="headerlink" title="9.类"></a>9.类</h1><p>面向对象编程是最有效的软件编写方法之一；在面向对象编程中，你编写表示现实世界中的事物和情景的类，并基于这些类来创建对象；</p>
@@ -640,6 +584,98 @@
         <tag>Python</tag>
         <tag>Python编程从入门到实践</tag>
         <tag>读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>7.用户输入和while循环</title>
+    <url>/2020/06/19/7.%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5%E5%92%8Cwhile%E5%BE%AA%E7%8E%AF/</url>
+    <content><![CDATA[<h1 id="7-用户输入和while循环"><a href="#7-用户输入和while循环" class="headerlink" title="7.用户输入和while循环"></a>7.用户输入和while循环</h1><h2 id="7-1-函数input的工作原理"><a href="#7-1-函数input的工作原理" class="headerlink" title="7.1  函数input的工作原理"></a>7.1  函数input的工作原理</h2><p>函数<code>input</code>让程序暂停运行，等待用户输入一些文本，获取用户输入后，<code>py</code>将其存储在一个变量中，以方便使用</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">message=input(<span class="string">'Tell me something,and i will repeat it back to you:'</span>)</span><br><span class="line">print(message)</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-1-1-编写清晰的程序"><a href="#7-1-1-编写清晰的程序" class="headerlink" title="7.1.1  编写清晰的程序"></a>7.1.1  编写清晰的程序</h3><p>每次当你使用<code>input</code>函数时，都应指定清晰而易于明白的提示，准确的指出你希望用户提供什么样的信息</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">name=input(<span class="string">'please enter your name: '</span>)</span><br><span class="line">print(<span class="string">'hello, '</span>+name+<span class="string">'!'</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-1-2-使用int来获取数值输入"><a href="#7-1-2-使用int来获取数值输入" class="headerlink" title="7.1.2  使用int来获取数值输入"></a>7.1.2  使用int来获取数值输入</h3><p>使用函数<code>input</code>，<code>py</code>将用户输入解读为字符串</p>
+<p>使用函数<code>int</code>可以将字符串转换为数值</p>
+<h3 id="7-1-3-求模运算符"><a href="#7-1-3-求模运算符" class="headerlink" title="7.1.3  求模运算符"></a>7.1.3  求模运算符</h3><p>处理数值信息时，求模运算符<code>%</code>是一个很有用的工具，它将两个数相除并返回余数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">4</span>%<span class="number">3</span></span><br><span class="line"><span class="comment">#1</span></span><br><span class="line"><span class="number">5</span>%<span class="number">3</span></span><br><span class="line"><span class="comment">#2</span></span><br><span class="line"><span class="number">6</span>%<span class="number">3</span></span><br><span class="line"><span class="comment">#0</span></span><br><span class="line"><span class="number">7</span>%<span class="number">3</span></span><br><span class="line"><span class="comment">#1</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="7-1-4-在python2-7中获取输入"><a href="#7-1-4-在python2-7中获取输入" class="headerlink" title="7.1.4  在python2.7中获取输入"></a>7.1.4  在python2.7中获取输入</h3><p>如果你使用的是<code>py2.7</code>，应该使用函数<code>raw_input</code>来提示用户输入，该函数与<code>py3</code>中的<code>input</code>一样，也将输入解读为字符串</p>
+<p><code>py2.7</code>中也有函数<code>input</code>，但是它会将用户的输入解读为<code>py</code>代码，并尝试运行它们</p>
+<p>因此，最好使用<code>raw_input</code>防止未知错误</p>
+<h2 id="7-2-while循环简介"><a href="#7-2-while循环简介" class="headerlink" title="7.2  while循环简介"></a>7.2  while循环简介</h2><p><code>for</code>循环用于针对集合中的每一个元素运行一个代码块，而<code>while</code>循环不断的运行，直到指定的条件不满足为止</p>
+<h3 id="7-2-1-使用while循环"><a href="#7-2-1-使用while循环" class="headerlink" title="7.2.1  使用while循环"></a>7.2.1  使用while循环</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">num=<span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> num&lt;=<span class="number">5</span>:</span><br><span class="line">  print(num)</span><br><span class="line">  num+=<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="7-2-2-让用户选择何时退出"><a href="#7-2-2-让用户选择何时退出" class="headerlink" title="7.2.2  让用户选择何时退出"></a>7.2.2  让用户选择何时退出</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">message=<span class="string">''</span></span><br><span class="line"><span class="keyword">while</span> message!=<span class="string">'quit'</span>:</span><br><span class="line">  message=input(<span class="string">'are you sure quit?'</span>)</span><br><span class="line">  print(message)</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-2-3-使用标志"><a href="#7-2-3-使用标志" class="headerlink" title="7.2.3  使用标志"></a>7.2.3  使用标志</h3><p>假如有多种原因导致程序无法继续执行下去，如果要在<code>while</code>语句中一一检查这些条件很麻烦且复杂，我们可以使用一个变量，用于判断整个程序是否可以继续运行下去，这个变量就叫做标志</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">active=<span class="literal">True</span></span><br><span class="line"><span class="keyword">while</span> active:</span><br><span class="line">  message=input(<span class="string">'please input something'</span>)</span><br><span class="line">  <span class="keyword">if</span> message=<span class="string">'quit'</span>:</span><br><span class="line">    active=<span class="literal">False</span></span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    print(message)</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-2-4-使用break退出循环"><a href="#7-2-4-使用break退出循环" class="headerlink" title="7.2.4  使用break退出循环"></a>7.2.4  使用break退出循环</h3><p>要立刻退出<code>while</code>循环，不再运行循环中余下的代码，也不管条件测试的结果如何，可以使用<code>break</code>语句</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">  message=input(<span class="string">'please input something'</span>)</span><br><span class="line">  <span class="keyword">if</span> message=<span class="string">'quit'</span>:</span><br><span class="line">    <span class="keyword">break</span></span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    print(message)</span><br></pre></td></tr></table></figure>
+
+<p>注意：在任何<code>py</code>循环中都可以使用<code>break</code>语句，包括<code>for</code>循环或者列表遍历</p>
+<h3 id="7-2-5-在循环中使用continue"><a href="#7-2-5-在循环中使用continue" class="headerlink" title="7.2.5  在循环中使用continue"></a>7.2.5  在循环中使用continue</h3><p><code>continue</code>在循环中的作用就是跳过本轮循环，直接到下一次循环</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cur_num=<span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> cur_num&lt;<span class="number">10</span>:</span><br><span class="line">  cur_num+=<span class="number">1</span></span><br><span class="line">  <span class="keyword">if</span>(cur_num%<span class="number">2</span>==<span class="number">0</span>):</span><br><span class="line">    <span class="keyword">continue</span></span><br><span class="line">  print(cur_num)</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-2-6-避免无限循环"><a href="#7-2-6-避免无限循环" class="headerlink" title="7.2.6  避免无限循环"></a>7.2.6  避免无限循环</h3><p>每个<code>while</code>循环都必须有停止运行的途径，否则会无限循环</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x=<span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> x&lt;=<span class="number">5</span>:</span><br><span class="line">  print(x)</span><br></pre></td></tr></table></figure>
+
+<p>因此很有必要对退出循环的条件小心再小心，避免无限循环</p>
+<h2 id="7-3-使用while循环来处理列表和字典"><a href="#7-3-使用while循环来处理列表和字典" class="headerlink" title="7.3  使用while循环来处理列表和字典"></a>7.3  使用while循环来处理列表和字典</h2><p><code>for</code>循环是一种遍历列表的有效方式，但是在<code>for</code>循环中不应修改列表，否则将导致<code>py</code>难以跟踪其中的元素</p>
+<p>要在遍历列表的同时对其进行修改，可以使用<code>while</code>循环</p>
+<h3 id="7-3-1-在列表之间移动元素"><a href="#7-3-1-在列表之间移动元素" class="headerlink" title="7.3.1  在列表之间移动元素"></a>7.3.1  在列表之间移动元素</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#首先创建一个待验证用户列表</span></span><br><span class="line"><span class="comment">#和一个用于存储已验证用户的空列表</span></span><br><span class="line">unconfirmed_users=[<span class="string">'alice'</span>,<span class="string">'brian'</span>,<span class="string">'candace'</span>]</span><br><span class="line">confirmed_users=[]</span><br><span class="line"><span class="comment">#验证每个用户，直到没有未验证用户为止</span></span><br><span class="line"><span class="comment">#将每个经过验证的用户都移到已验证用户列表中</span></span><br><span class="line"><span class="keyword">while</span> unconfirmed_users:</span><br><span class="line">  cur_user=unconfirmed_users.pop()</span><br><span class="line">  print(<span class="string">'verifying user:'</span>+cur_user.title())</span><br><span class="line">  confirmed_users.append(cur_user)</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> confirmed_users:</span><br><span class="line">  print(item.title())</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-3-2-删除包含特定值的所有列表元素"><a href="#7-3-2-删除包含特定值的所有列表元素" class="headerlink" title="7.3.2  删除包含特定值的所有列表元素"></a>7.3.2  删除包含特定值的所有列表元素</h3><p>我们可以使用<code>remove</code>方法来删除列表中的特定值，但是该方法只会删除一次</p>
+<p>如果要删除列表中所有的特定值，应该这样：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pets=[<span class="string">'dog'</span>,<span class="string">'cat'</span>,<span class="string">'dog'</span>,<span class="string">'goldfish'</span>,<span class="string">'cat'</span>,<span class="string">'rabbit'</span>,<span class="string">'cat'</span>]</span><br><span class="line"><span class="keyword">while</span> <span class="string">'cat'</span> <span class="keyword">in</span> pets:</span><br><span class="line">  pets.remove(<span class="string">'cat'</span>)</span><br><span class="line">print(pets)</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-3-3-使用用户输入来填充字典"><a href="#7-3-3-使用用户输入来填充字典" class="headerlink" title="7.3.3  使用用户输入来填充字典"></a>7.3.3  使用用户输入来填充字典</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">res=&#123;&#125;</span><br><span class="line">flag=<span class="literal">True</span></span><br><span class="line"><span class="keyword">while</span> flag:</span><br><span class="line">  name=input(<span class="string">'please input your name'</span>)</span><br><span class="line">  result=input(<span class="string">'please input your result'</span>)</span><br><span class="line">  res[name]=result</span><br><span class="line">  repeat=input(<span class="string">'would you like to again,yes/no?'</span>)</span><br><span class="line">  <span class="keyword">if</span> repeat==<span class="string">'no'</span>:</span><br><span class="line">    flag=<span class="literal">False</span></span><br><span class="line">print(<span class="string">"it's over"</span>)</span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> res:</span><br><span class="line">  print(key+<span class="string">':'</span>+res[key])</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Python编程从入门到实践</tag>
+        <tag>读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>预编译</title>
+    <url>/2019/10/08/%E9%A2%84%E7%BC%96%E8%AF%91/</url>
+    <content><![CDATA[<h1 id="预编译"><a href="#预编译" class="headerlink" title="预编译"></a>预编译</h1><p><code>JavaScript</code>属于单线程的解释型语言，单线程暂且不论；</p>
+<p>解释型语言就是读一行执行一行的意思；</p>
+<p>不过在执行之前，会有语法分析和预编译两个过程；</p>
+<p>语法分析意思就是在执行代码之前会先扫描代码一遍，但是不执行，只是为了检测有没有什么语法错误等等；</p>
+<h2 id="预编译（预编译发生在函数执行的前一刻）"><a href="#预编译（预编译发生在函数执行的前一刻）" class="headerlink" title="预编译（预编译发生在函数执行的前一刻）"></a>预编译（预编译发生在函数执行的前一刻）</h2><h3 id="函数声明整体提升："><a href="#函数声明整体提升：" class="headerlink" title="函数声明整体提升："></a>函数声明整体提升：</h3><p>如果写了一个函数声明，系统会把其提升到逻辑的最顶部，所以无论在哪里调用，实际上都是在其下面调用；</p>
+<h3 id="变量声明提升："><a href="#变量声明提升：" class="headerlink" title="变量声明提升："></a>变量声明提升：</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a=<span class="number">123</span>；</span><br></pre></td></tr></table></figure>
+
+<p><code>var a</code>叫做变量声明；</p>
+<p><code>a=123；</code>叫做变量赋值；</p>
+<p>只要声明了，就会提升到顶部，但是在没赋值之前，输出的值为<code>undefined</code>；</p>
+<h3 id="函数体内预编译的四部曲："><a href="#函数体内预编译的四部曲：" class="headerlink" title="函数体内预编译的四部曲："></a>函数体内预编译的四部曲：</h3><p>1.创建<code>AO</code>对象 <code>Activation Object</code>，即执行上下文；</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">AO&#123;</span><br><span class="line">  a:<span class="literal">undefined</span>,</span><br><span class="line">  b:<span class="literal">undefined</span>,</span><br><span class="line">  d:<span class="literal">undefined</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.找形参和变量声明，将变量和形参作为<code>AO</code>的属性挂上去，值为<code>undefined</code>；</p>
+<p>3.将实参值与形参相统一，就是将实参的值放到形参中去；</p>
+<p>4.在函数体中找函数声明，将函数名作为<code>AO</code>的属性挂上去，将函数的值（也就是函数体）挂在<code>AO</code>里的对应函数名上，如果之前变量或形参存在同名属性，这时都会被覆盖；</p>
+<p>注意：函数执行时，都会从<code>AO</code>中找对应属性和方法；</p>
+<h3 id="全局上的预编译（GO-window）"><a href="#全局上的预编译（GO-window）" class="headerlink" title="全局上的预编译（GO===window）"></a>全局上的预编译（GO===window）</h3><p>1.创建<code>GO</code>对象 <code>Global Object</code>；</p>
+<p>2.变量声明提升，赋值<code>undefined</code>；</p>
+<p>3.函数声明提升，赋值；</p>
+<h2 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h2><p>一切变量未经声明，就直接赋值，就属于全局变量，即全局对象<code>window</code>的变量；</p>
+<p>一切声明的全局变量，归window所有；</p>
+<p><code>window</code>就是全局的作用域；</p>
+<p>作用域其实也是一个对象；</p>
+]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>读书笔记</tag>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
 </search>
