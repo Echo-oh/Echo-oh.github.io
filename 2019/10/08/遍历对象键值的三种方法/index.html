@@ -68,6 +68,7 @@
 
 
 
+  <meta name="keywords" content="读书笔记,JavaScript," />
 
 
 
@@ -77,13 +78,18 @@
 
 
 
-<meta name="description" content="念念不忘，必有回响">
-<meta property="og:type" content="website">
-<meta property="og:title" content="斩首的夜">
-<meta property="og:url" content="http://yoursite.com/categories/Python/index.html">
+
+<meta name="description" content="遍历对象属性的三种方法补充：下面三种方法，不光可以遍历obj，还可以遍历arr和str，而arr和str中的属性就是它们的索引（字符串类型），与属性相对应的值就是对应索引下的值！！！ 1.  for…in…1234567891011var obj &#x3D; &amp;#123;&quot;name&quot;:&quot;tom&quot;,&quot;sex&quot;:&quot;male&quot;&amp;#125;；Object.defineProperty(obj, &quot;age&quot;, &amp;#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="遍历对象键值的三种方法">
+<meta property="og:url" content="http://yoursite.com/2019/10/08/%E9%81%8D%E5%8E%86%E5%AF%B9%E8%B1%A1%E9%94%AE%E5%80%BC%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="斩首的夜">
-<meta property="og:description" content="念念不忘，必有回响">
+<meta property="og:description" content="遍历对象属性的三种方法补充：下面三种方法，不光可以遍历obj，还可以遍历arr和str，而arr和str中的属性就是它们的索引（字符串类型），与属性相对应的值就是对应索引下的值！！！ 1.  for…in…1234567891011var obj &#x3D; &amp;#123;&quot;name&quot;:&quot;tom&quot;,&quot;sex&quot;:&quot;male&quot;&amp;#125;；Object.defineProperty(obj, &quot;age&quot;, &amp;#">
+<meta property="article:published_time" content="2019-10-08T08:51:04.000Z">
+<meta property="article:modified_time" content="2020-07-16T09:45:21.294Z">
 <meta property="article:author" content="白夜">
+<meta property="article:tag" content="读书笔记">
+<meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
 
 
@@ -114,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/Python/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/10/08/遍历对象键值的三种方法/"/>
 
 
 
 
 
-  <title>分类: Python | 斩首的夜</title>
+  <title>遍历对象键值的三种方法 | 斩首的夜</title>
   
 
 
@@ -139,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -257,251 +263,203 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block category">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Python<small>分类</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/08/%E9%81%8D%E5%8E%86%E5%AF%B9%E8%B1%A1%E9%94%AE%E5%80%BC%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="白夜">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avtor.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="斩首的夜">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2020/06/24/10.%E6%96%87%E4%BB%B6%E5%92%8C%E5%BC%82%E5%B8%B8/" itemprop="url">
-              
-                <span itemprop="name">10.文件和异常</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">遍历对象键值的三种方法</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-06-24T17:42:35+08:00"
-              content="2020-06-24" >
-          06-24
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-08T16:51:04+08:00">
+                2019-10-08
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/10/08/%E9%81%8D%E5%8E%86%E5%AF%B9%E8%B1%A1%E9%94%AE%E5%80%BC%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/10/08/%E9%81%8D%E5%8E%86%E5%AF%B9%E8%B1%A1%E9%94%AE%E5%80%BC%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/10/08/%E9%81%8D%E5%8E%86%E5%AF%B9%E8%B1%A1%E9%94%AE%E5%80%BC%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/" class="leancloud_visitors" data-flag-title="遍历对象键值的三种方法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/06/23/9.%E7%B1%BB/" itemprop="url">
-              
-                <span itemprop="name">9.类</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-06-23T22:26:29+08:00"
-              content="2020-06-23" >
-          06-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
+        <h3 id="遍历对象属性的三种方法"><a href="#遍历对象属性的三种方法" class="headerlink" title="遍历对象属性的三种方法"></a>遍历对象属性的三种方法</h3><p>补充：下面三种方法，不光可以遍历obj，还可以遍历arr和str，而arr和str中的属性就是它们的索引（字符串类型），与属性相对应的值就是对应索引下的值！！！</p>
+<h5 id="1-for…in…"><a href="#1-for…in…" class="headerlink" title="1.  for…in…"></a>1.  for…in…</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="string">"name"</span>:<span class="string">"tom"</span>,<span class="string">"sex"</span>:<span class="string">"male"</span>&#125;；</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">"age"</span>, &#123;<span class="attr">value</span>:<span class="string">"18"</span>, <span class="attr">enumerable</span>:<span class="literal">false</span>&#125;);</span><br><span class="line"><span class="comment">//增加不可枚举的属性age</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.protoPer1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="string">"name is tom"</span>);&#125;;</span><br><span class="line"><span class="comment">//通过原型链增加属性，为一个函数</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.protoPer2 = <span class="number">2</span>;</span><br><span class="line"><span class="comment">//通过原型链增加属性，为一个整型值2</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> prop <span class="keyword">in</span> obj)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(prop);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//可以遍历出对象的所有可枚举属性，包括自身属性，继承自原型的属性，因为上面的age属性不可枚举，所以输出不了</span></span><br></pre></td></tr></table></figure>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+<h5 id="2-Object-keys"><a href="#2-Object-keys" class="headerlink" title="2.  Object.keys"></a>2.  Object.keys</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="string">"name"</span>:<span class="string">"tom"</span>,<span class="string">"sex"</span>:<span class="string">"male"</span>&#125;；</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">"age"</span>, &#123;<span class="attr">value</span>:<span class="string">"18"</span>, <span class="attr">enumerable</span>:<span class="literal">false</span>&#125;);</span><br><span class="line"><span class="comment">//增加不可枚举的属性age</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.protoPer1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="string">"name is tom"</span>);&#125;;</span><br><span class="line"><span class="comment">//通过原型链增加属性，为一个函数</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.protoPer2 = <span class="number">2</span>;</span><br><span class="line"><span class="comment">//通过原型链增加属性，为一个整型值2</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(obj));</span><br><span class="line"><span class="comment">//该方法返回一个数组，元素为遍历出的属性，该方法可以遍历出对象自身的可枚举属性，不包括继承自原型的属性和不可枚举的属性</span></span><br></pre></td></tr></table></figure>
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/06/21/8.%E5%87%BD%E6%95%B0/" itemprop="url">
-              
-                <span itemprop="name">8.函数</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-06-21T14:12:00+08:00"
-              content="2020-06-21" >
-          06-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/06/19/7.%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5%E5%92%8Cwhile%E5%BE%AA%E7%8E%AF/" itemprop="url">
-              
-                <span itemprop="name">7.用户输入和while循环</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-06-19T17:11:40+08:00"
-              content="2020-06-19" >
-          06-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/06/17/6.%E5%AD%97%E5%85%B8/" itemprop="url">
-              
-                <span itemprop="name">6.字典</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-06-17T17:50:19+08:00"
-              content="2020-06-17" >
-          06-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/06/16/5.if%E8%AF%AD%E5%8F%A5/" itemprop="url">
-              
-                <span itemprop="name">5.if语句</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-06-16T11:22:47+08:00"
-              content="2020-06-16" >
-          06-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/06/11/4.%E6%93%8D%E4%BD%9C%E5%88%97%E8%A1%A8/" itemprop="url">
-              
-                <span itemprop="name">4.操作列表</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-06-11T18:44:48+08:00"
-              content="2020-06-11" >
-          06-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/06/10/3.%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/" itemprop="url">
-              
-                <span itemprop="name">3.列表简介</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-06-10T19:07:28+08:00"
-              content="2020-06-10" >
-          06-10
-        </time>
-      </div>
-
-    </header>
-  </article>
+<h5 id="3-Object-getOwnProperty"><a href="#3-Object-getOwnProperty" class="headerlink" title="3.  Object.getOwnProperty"></a>3.  Object.getOwnProperty</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="string">"name"</span>:<span class="string">"tom"</span>,<span class="string">"sex"</span>:<span class="string">"male"</span>&#125;；</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">"age"</span>, &#123;<span class="attr">value</span>:<span class="string">"18"</span>, <span class="attr">enumerable</span>:<span class="literal">false</span>&#125;);</span><br><span class="line"><span class="comment">//增加不可枚举的属性age</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.protoPer1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="string">"name is tom"</span>);&#125;;</span><br><span class="line"><span class="comment">//通过原型链增加属性，为一个函数</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.protoPer2 = <span class="number">2</span>;</span><br><span class="line"><span class="comment">//通过原型链增加属性，为一个整型值2</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.getOwnPropertyNames(obj));</span><br><span class="line"><span class="comment">//该方法可以遍历出对象自身的属性，包括可枚举和不可枚举的属性，但是不包括继承自原型的属性</span></span><br></pre></td></tr></table></figure>
 
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag"># 读书笔记</a>
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/08/JavaScript%E7%9F%A5%E8%AF%86%E7%82%B9%E8%A1%A5%E5%85%851/" rel="prev" title="JavaScript知识点补充1">
+                JavaScript知识点补充1 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -509,6 +467,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -529,8 +494,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -610,6 +584,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#遍历对象属性的三种方法"><span class="nav-number">1.</span> <span class="nav-text">遍历对象属性的三种方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-for…in…"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.  for…in…</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Object-keys"><span class="nav-number">1.0.2.</span> <span class="nav-text">2.  Object.keys</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-Object-getOwnProperty"><span class="nav-number">1.0.3.</span> <span class="nav-text">3.  Object.getOwnProperty</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -790,6 +780,10 @@ setInterval("createtime()",250);
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
