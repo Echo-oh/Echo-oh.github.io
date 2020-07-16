@@ -282,7 +282,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/08/JavaScript%E7%9F%A5%E8%AF%86%E7%82%B9%E8%A1%A5%E5%85%852/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/08/%E9%A2%84%E7%BC%96%E8%AF%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="白夜">
@@ -301,7 +301,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/10/08/JavaScript%E7%9F%A5%E8%AF%86%E7%82%B9%E8%A1%A5%E5%85%852/" itemprop="url">JavaScript知识点补充2</a></h1>
+                <a class="post-title-link" href="/2019/10/08/%E9%A2%84%E7%BC%96%E8%AF%91/" itemprop="url">预编译</a></h1>
         
 
         <div class="post-meta">
@@ -354,8 +354,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/10/08/JavaScript%E7%9F%A5%E8%AF%86%E7%82%B9%E8%A1%A5%E5%85%852/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/10/08/JavaScript%E7%9F%A5%E8%AF%86%E7%82%B9%E8%A1%A5%E5%85%852/" itemprop="commentCount"></span>
+                <a href="/2019/10/08/%E9%A2%84%E7%BC%96%E8%AF%91/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/10/08/%E9%A2%84%E7%BC%96%E8%AF%91/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -363,7 +363,7 @@
 
           
           
-             <span id="/2019/10/08/JavaScript%E7%9F%A5%E8%AF%86%E7%82%B9%E8%A1%A5%E5%85%852/" class="leancloud_visitors" data-flag-title="JavaScript知识点补充2">
+             <span id="/2019/10/08/%E9%A2%84%E7%BC%96%E8%AF%91/" class="leancloud_visitors" data-flag-title="预编译">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -396,47 +396,30 @@
       
         
           
-            <h4 id="1-主流浏览器内核"><a href="#1-主流浏览器内核" class="headerlink" title="1.主流浏览器内核"></a>1.主流浏览器内核</h4><ul>
-<li><p>IE:  trident</p>
-</li>
-<li><p>Chrome : webkit/blink</p>
-</li>
-<li><p>firefox: Gecko</p>
-</li>
-<li><p>Opera: presto</p>
-</li>
-<li><p>Safari: webkit</p>
-</li>
-</ul>
-<h4 id="2-栈与堆"><a href="#2-栈与堆" class="headerlink" title="2.栈与堆"></a>2.栈与堆</h4><p>原始值放在栈中（stack） 先进后出    类似一个盒子，先放进去的永远得等后放进去的东西取出之后才可以拿出来</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a=<span class="number">10</span>;<span class="comment">//为a分配一个空间，里面放一个值10</span></span><br><span class="line"><span class="keyword">var</span> b=a;<span class="comment">//为b分配一个空间，将a的值的一个复制放进去</span></span><br><span class="line"><span class="keyword">var</span> b=<span class="number">100</span>;</span><br><span class="line"><span class="built_in">console</span>.log(b);<span class="comment">//这样就算a或者b各自改变了值，都不会互相影响</span></span><br></pre></td></tr></table></figure>
+            <h1 id="预编译"><a href="#预编译" class="headerlink" title="预编译"></a>预编译</h1><p><code>JavaScript</code>属于单线程的解释型语言，单线程暂且不论；</p>
+<p>解释型语言就是读一行执行一行的意思；</p>
+<p>不过在执行之前，会有语法分析和预编译两个过程；</p>
+<p>语法分析意思就是在执行代码之前会先扫描代码一遍，但是不执行，只是为了检测有没有什么语法错误等等；</p>
+<h2 id="预编译（预编译发生在函数执行的前一刻）"><a href="#预编译（预编译发生在函数执行的前一刻）" class="headerlink" title="预编译（预编译发生在函数执行的前一刻）"></a>预编译（预编译发生在函数执行的前一刻）</h2><h3 id="函数声明整体提升："><a href="#函数声明整体提升：" class="headerlink" title="函数声明整体提升："></a>函数声明整体提升：</h3><p>如果写了一个函数声明，系统会把其提升到逻辑的最顶部，所以无论在哪里调用，实际上都是在其下面调用；</p>
+<h3 id="变量声明提升："><a href="#变量声明提升：" class="headerlink" title="变量声明提升："></a>变量声明提升：</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a=<span class="number">123</span>；</span><br></pre></td></tr></table></figure>
 
-<p><strong>重新理解：</strong></p>
-<p><strong>原始值不可修改，所以上边的b修改为100时，是重新分配了一个空间里面放着值100，并将b与这个空间绑定起来，之前放着值10的空间与b的关系烟消云散。但是其实那个空间里的值依旧是10，只不过现在没有变量名来访问这个空间，所以要想真正的删除这个值，得往内存中疯狂存东西，造成二次覆盖，然后再删除，然后再存东西，再删东西，循环往复。</strong></p>
-<p>引用值放在堆中（heap） 先进先出   类似一个管子，可以从一头先进去，再从另外一头出来</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr=[<span class="number">1</span>,<span class="number">2</span>];<span class="comment">//这一步是在堆中拿出一个空间放数组，并将这个空间的地址放在栈中空间中，并用arr与这个栈空间绑定</span></span><br><span class="line"><span class="keyword">var</span> arr1=arr;<span class="comment">//这一步是将空间地址复制一份给arr1，所以它们两指向同一个数组对象</span></span><br><span class="line">arr1.push(<span class="number">3</span>);</span><br><span class="line"><span class="built_in">console</span>.log(arr);<span class="comment">//1，2，3</span></span><br></pre></td></tr></table></figure>
+<p><code>var a</code>叫做变量声明；</p>
+<p><code>a=123；</code>叫做变量赋值；</p>
+<p>只要声明了，就会提升到顶部，但是在没赋值之前，输出的值为<code>undefined</code>；</p>
+<h3 id="函数体内预编译的四部曲："><a href="#函数体内预编译的四部曲：" class="headerlink" title="函数体内预编译的四部曲："></a>函数体内预编译的四部曲：</h3><p>1.创建<code>AO</code>对象 <code>Activation Object</code>，即执行上下文；</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">AO&#123;</span><br><span class="line">  a:<span class="literal">undefined</span>,</span><br><span class="line">  b:<span class="literal">undefined</span>,</span><br><span class="line">  d:<span class="literal">undefined</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h4 id="3-奇葩数值计算"><a href="#3-奇葩数值计算" class="headerlink" title="3.奇葩数值计算"></a>3.奇葩数值计算</h4><ol>
-<li><p>任何数对0取余都等于NaN</p>
-</li>
-<li><p>任何数值除以0都等于Infinity或-Infinity（除了0/0等于NaN）</p>
-</li>
-<li><p>任何数值除以Infinity都等于0（负数除以其等于-0）</p>
-</li>
-<li><p>任何数值除以-Infinity都等于-0（负数除以其等于0）</p>
-</li>
-<li><p>Infinity除以Infinity等于NaN（不管正负）</p>
-</li>
-<li><p>Infinity+ （-Infinity）等于NaN</p>
-</li>
-</ol>
-<h4 id="4-与或非（会将表达式转换成布尔值进行运算）"><a href="#4-与或非（会将表达式转换成布尔值进行运算）" class="headerlink" title="4.与或非（会将表达式转换成布尔值进行运算）"></a>4.与或非（会将表达式转换成布尔值进行运算）</h4><p><strong>注意了：只有 null , undefined , ‘’（空字符串） , 0 , false , NaN 这六个值会被转换成false，除此之外，都是true</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span>  a= <span class="number">1</span> &amp;&amp; <span class="number">0</span> &amp;&amp; <span class="number">1</span>;<span class="comment">//0    &amp;&amp;运算会从左往右，然后将每个表达式转换成布尔值进行运算，只有表达式为真的时候，会往后继续运算，但是表达式为假的时候，就不会往后运算了，会将这个表达式返回</span></span><br><span class="line"><span class="keyword">var</span> b= <span class="number">0</span> || <span class="number">1</span> || <span class="number">0</span>;<span class="comment">//1   ||运算与&amp;&amp;运算差不多，不过在表达式为错的时候会往后运算，但是表达式为真的时候会停止向后运算，并将当前的表达式返回</span></span><br><span class="line"><span class="keyword">var</span> c= !<span class="string">''</span>;<span class="comment">//true  !运算会将当前表达式转换成布尔值，并将其取反，然后返回这个取反的布尔值</span></span><br><span class="line"><span class="keyword">var</span> d= !!<span class="string">''</span>;<span class="comment">//false !!运算也就是将当前表达式转换成布尔值，与Boolean方法类似</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
+<p>2.找形参和变量声明，将变量和形参作为<code>AO</code>的属性挂上去，值为<code>undefined</code>；</p>
+<p>3.将实参值与形参相统一，就是将实参的值放到形参中去；</p>
+<p>4.在函数体中找函数声明，将函数名作为<code>AO</code>的属性挂上去，将函数的值（也就是函数体）挂在<code>AO</code>里的对应函数名上，如果之前变量或形参存在同名属性，这时都会被覆盖；</p>
+<p>注意：函数执行时，都会从<code>AO</code>中找对应属性和方法；</p>
+<h3 id="全局上的预编译（GO-window）"><a href="#全局上的预编译（GO-window）" class="headerlink" title="全局上的预编译（GO===window）"></a>全局上的预编译（GO===window）</h3><p>1.创建<code>GO</code>对象 <code>Global Object</code>；</p>
+<p>2.变量声明提升，赋值<code>undefined</code>；</p>
+<p>3.函数声明提升，赋值；</p>
+<h2 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h2><p>一切变量未经声明，就直接赋值，就属于全局变量，即全局对象<code>window</code>的变量；</p>
+<p>一切声明的全局变量，归window所有；</p>
+<p><code>window</code>就是全局的作用域；</p>
+<p>作用域其实也是一个对象；</p>
 
           
         
@@ -693,7 +676,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives%7C%7Carchive">
+                <a href="/archives">
               
                   <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>

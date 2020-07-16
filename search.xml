@@ -1,69 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>5.if语句</title>
-    <url>/2020/06/16/5.if%E8%AF%AD%E5%8F%A5/</url>
-    <content><![CDATA[<h1 id="5-if语句"><a href="#5-if语句" class="headerlink" title="5.if语句"></a>5.if语句</h1><h2 id="5-1-一个简单示例"><a href="#5-1-一个简单示例" class="headerlink" title="5.1  一个简单示例"></a>5.1  一个简单示例</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars=[<span class="string">'audi'</span>,<span class="string">'bmw'</span>,<span class="string">'subaru'</span>,<span class="string">'toyata'</span>]</span><br><span class="line"><span class="keyword">for</span> car <span class="keyword">in</span> cars:</span><br><span class="line">  <span class="keyword">if</span> car==<span class="string">'bmw'</span>:</span><br><span class="line">    print(car.upper())</span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    print(car.title())</span><br></pre></td></tr></table></figure>
+    <title>3.列表简介</title>
+    <url>/2020/06/10/3.%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/</url>
+    <content><![CDATA[<h1 id="3-列表简介"><a href="#3-列表简介" class="headerlink" title="3.列表简介"></a>3.列表简介</h1><h2 id="3-1-列表是什么"><a href="#3-1-列表是什么" class="headerlink" title="3.1  列表是什么"></a>3.1  列表是什么</h2><p>列表由一系列按照特定顺序排列的元素组成，可以将任何东西放入列表，其中的元素之间可以没有任何关系；</p>
+<p>由于列表通常包含多个元素，所以常给列表指定复数名称，比如说 <code>names</code></p>
+<p>在<code>python</code>中，用方括号<code>[]</code>来表示列表，并用逗号来分隔其中的元素；</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles=[<span class="string">'trek'</span>,<span class="string">'realine'</span>,<span class="string">'ancodea'</span>]</span><br><span class="line">print(bicycles)</span><br></pre></td></tr></table></figure>
 
-<h2 id="5-2-条件测试"><a href="#5-2-条件测试" class="headerlink" title="5.2  条件测试"></a>5.2  条件测试</h2><p>每句<code>if</code>语句的核心都是一个值为<code>True</code>或者<code>False</code>的表达式，这种表达式被称为条件测试；</p>
-<p><code>py</code>根据条件测试的值为<code>True</code>或者<code>False</code>来决定是否执行<code>if</code>语句中的代码，如果是<code>True</code>则执行，如果是<code>False</code>则忽略跳过</p>
-<h3 id="5-2-1-检查是否相等"><a href="#5-2-1-检查是否相等" class="headerlink" title="5.2.1  检查是否相等"></a>5.2.1  检查是否相等</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">car=<span class="string">'audi'</span></span><br><span class="line">car==<span class="string">'audi'</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-1-1-访问列表元素"><a href="#3-1-1-访问列表元素" class="headerlink" title="3.1.1  访问列表元素"></a>3.1.1  访问列表元素</h3><p>列表是有序集合，要访问列表的任何元素，只需将该元素的位置或索引告诉<code>python</code>即可</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles=[<span class="string">'trek'</span>,<span class="string">'realine'</span>,<span class="string">'ancodea'</span>]</span><br><span class="line">print(bicycles[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
 
-<p><code>=</code>是赋值语句，<code>==</code>是判断语句</p>
-<h3 id="5-2-2-检查是否相等时不考虑大小写"><a href="#5-2-2-检查是否相等时不考虑大小写" class="headerlink" title="5.2.2  检查是否相等时不考虑大小写"></a>5.2.2  检查是否相等时不考虑大小写</h3><p><code>py</code>中检查是否相等时会区分大小写</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">car=<span class="string">'Audi'</span></span><br><span class="line">car==<span class="string">'audi'</span></span><br><span class="line"><span class="comment">#False</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-1-2-索引从-0-开始而不是-1-开始"><a href="#3-1-2-索引从-0-开始而不是-1-开始" class="headerlink" title="3.1.2  索引从 0 开始而不是 1 开始"></a>3.1.2  索引从 0 开始而不是 1 开始</h3><p>大部分编程语言中，索引都是从 0 开始，这与列表操作的底层实现有关，所以访问列表中的相关元素，只需将其位置减一即可</p>
+<p><code>python</code>为访问最后一个列表元素提供了一种特殊语法，通过将索引指定为 -1，可以让其返回最后一个列表元素</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles=[<span class="string">'trek'</span>,<span class="string">'realine'</span>,<span class="string">'ancodea'</span>]</span><br><span class="line">print(bicycles[<span class="number">-1</span>])</span><br></pre></td></tr></table></figure>
 
-<p>但是可以通过<code>lower</code>语句来忽略大小写</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">car=<span class="string">'Audi'</span></span><br><span class="line">car.lower()==<span class="string">'audi'</span></span><br><span class="line"><span class="comment">#True</span></span><br></pre></td></tr></table></figure>
+<p>这种约定也适用于其它负数索引，比如说 -2 返回倒数第二个列表元素，索引 -3 返回倒数第三个列表元素，以此类推；</p>
+<h3 id="3-1-3-使用列表中的各个值"><a href="#3-1-3-使用列表中的各个值" class="headerlink" title="3.1.3  使用列表中的各个值"></a>3.1.3  使用列表中的各个值</h3><p>列表中的每个元素，只要通过索引取得该元素，即可将其当做其它变量一样使用</p>
+<h2 id="3-2-修改、添加和删除元素"><a href="#3-2-修改、添加和删除元素" class="headerlink" title="3.2  修改、添加和删除元素"></a>3.2  修改、添加和删除元素</h2><p>创建的列表大多数是动态的，会随着程序的运行增删元素</p>
+<h3 id="3-2-1-修改列表元素"><a href="#3-2-1-修改列表元素" class="headerlink" title="3.2.1  修改列表元素"></a>3.2.1  修改列表元素</h3><p>修改列表元素之前，首先通过索引取到该元素，然后通过赋值语句修改</p>
+<h3 id="3-2-2-在列表中添加元素"><a href="#3-2-2-在列表中添加元素" class="headerlink" title="3.2.2  在列表中添加元素"></a>3.2.2  在列表中添加元素</h3><p><code>python</code>提供了多种在既有列表中添加新元素的方法</p>
+<h4 id="1-在列表末尾添加元素"><a href="#1-在列表末尾添加元素" class="headerlink" title="1.在列表末尾添加元素"></a>1.在列表末尾添加元素</h4><p>通过<code>append</code>方法可以将元素附加到列表末尾，而不影响列表中的其它元素</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles=[]</span><br><span class="line">motorcycles.append(<span class="string">'honda'</span>)</span><br><span class="line">motorcycles.append(<span class="string">'yamaha'</span>)</span><br><span class="line">motorcycles.append(<span class="string">'suzuki'</span>)</span><br><span class="line">print(motorcycles)</span><br></pre></td></tr></table></figure>
 
-<p><code>lower</code>不会改变原有值，只是复制出一个转换为小写的副本出来</p>
-<h3 id="5-2-3-检查是否不相等"><a href="#5-2-3-检查是否不相等" class="headerlink" title="5.2.3  检查是否不相等"></a>5.2.3  检查是否不相等</h3><p>要判断两个值是否不等，可使用<code>!=</code>语句</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">request_topping=<span class="string">'mushrooms'</span></span><br><span class="line"><span class="keyword">if</span> request_topping!=<span class="string">'anchovies'</span>:</span><br><span class="line">  print(<span class="string">'Hold the anchovies'</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="2-在列表中插入元素"><a href="#2-在列表中插入元素" class="headerlink" title="2.在列表中插入元素"></a>2.在列表中插入元素</h4><p>通过<code>insert</code>方法可以在列表中的任何位置添加新元素；为此，你需要指定新元素的索引与值</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles=[<span class="string">'honda'</span>,<span class="string">'yamaha'</span>,<span class="string">'suzuki'</span>]</span><br><span class="line">motorcycles.insert(<span class="number">0</span>,<span class="string">'ducati'</span>)</span><br><span class="line">print(motorcycles)</span><br></pre></td></tr></table></figure>
 
-<h3 id="5-2-4-比较数字"><a href="#5-2-4-比较数字" class="headerlink" title="5.2.4  比较数字"></a>5.2.4  比较数字</h3><p>像上面一样，数字也是可以比较相等或者不相等</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age=<span class="number">17</span></span><br><span class="line">age==<span class="number">17</span></span><br><span class="line">age!=<span class="number">17</span></span><br></pre></td></tr></table></figure>
+<p>在上述例子中，<code>ducati</code>值被插入到了列表开头，方法<code>insert</code>在索引 0 处添加空间，并将新元素存储到这个地方，这种操作将列表中既有的每个元素都右移一个位置</p>
+<h3 id="3-2-3-从列表中删除元素"><a href="#3-2-3-从列表中删除元素" class="headerlink" title="3.2.3  从列表中删除元素"></a>3.2.3  从列表中删除元素</h3><h4 id="1-使用-del-语句删除元素"><a href="#1-使用-del-语句删除元素" class="headerlink" title="1.使用 del 语句删除元素"></a>1.使用 del 语句删除元素</h4><p>如果知道元素在列表中的位置，可以直接通过<code>del</code>语句删除该元素</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles=[<span class="string">'honda'</span>,<span class="string">'yamaha'</span>,<span class="string">'suzuki'</span>]</span><br><span class="line"><span class="keyword">del</span> motorcycles[<span class="number">0</span>]</span><br><span class="line"><span class="keyword">del</span> motorcycles[<span class="number">1</span>]</span><br><span class="line">print(motorcycles)</span><br></pre></td></tr></table></figure>
 
-<p>也可以进行一些数学比较，比如小于，小于等于，大于，大于等于</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age=<span class="number">17</span></span><br><span class="line">age&gt;<span class="number">10</span></span><br><span class="line">age&gt;=<span class="number">10</span></span><br><span class="line">age&lt;<span class="number">20</span></span><br><span class="line">age&lt;=<span class="number">20</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-使用方法-pop-删除元素"><a href="#2-使用方法-pop-删除元素" class="headerlink" title="2.使用方法 pop 删除元素"></a>2.使用方法 pop 删除元素</h4><p><code>pop</code> 方法可以删除列表末尾的值，并让你能够接着使用它；列表就像一个栈，删除列表末尾的元素就像是弹出栈顶元素</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles=[<span class="string">'honda'</span>,<span class="string">'yamaha'</span>,<span class="string">'suzuki'</span>]</span><br><span class="line">print(motorcycles)</span><br><span class="line">popped_motorcycles=motorcycles.pop()</span><br><span class="line">print(motorcycles)</span><br><span class="line">print(popped_motorcycles)</span><br></pre></td></tr></table></figure>
 
-<h3 id="5-2-5-检查多个条件"><a href="#5-2-5-检查多个条件" class="headerlink" title="5.2.5  检查多个条件"></a>5.2.5  检查多个条件</h3><p>如果想要同时检查多个条件，有时你需要一个表达式同时满足两个条件时才会执行相应的操作，有时只需要满足其中一个条件即可执行相应的操作，<code>and</code>和<code>or</code>语句可以帮助你</p>
-<h4 id="1-使用-and-检查多个条件"><a href="#1-使用-and-检查多个条件" class="headerlink" title="1.  使用 and 检查多个条件"></a>1.  使用 and 检查多个条件</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age=<span class="number">10</span></span><br><span class="line">age&gt;<span class="number">9</span> <span class="keyword">and</span> age&lt;<span class="number">20</span></span><br><span class="line"><span class="comment">#只有当两个表达式都为True时，整体才为True</span></span><br></pre></td></tr></table></figure>
+<h4 id="3-弹出列表中任何位置的元素"><a href="#3-弹出列表中任何位置的元素" class="headerlink" title="3.弹出列表中任何位置的元素"></a>3.弹出列表中任何位置的元素</h4><p>实际上，可以利用<code>pop</code>方法来删除列表中任何位置的元素，只需要给<code>pop</code>方法传参，即要删除的元素在列表中的索引即可</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles=[<span class="string">'honda'</span>,<span class="string">'yamaha'</span>,<span class="string">'suzuki'</span>]</span><br><span class="line">first_owned=motorcycles.pop(<span class="number">0</span>)</span><br><span class="line">print(first_owned)</span><br></pre></td></tr></table></figure>
 
-<h4 id="2-使用-or-检查多个条件"><a href="#2-使用-or-检查多个条件" class="headerlink" title="2.  使用 or 检查多个条件"></a>2.  使用 or 检查多个条件</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age=<span class="number">10</span></span><br><span class="line">age&gt;<span class="number">11</span> <span class="keyword">or</span> age&lt;<span class="number">20</span></span><br><span class="line"><span class="comment">#两个表达式只要有一个是True，整体就为True</span></span><br></pre></td></tr></table></figure>
+<h4 id="4-根据值删除元素"><a href="#4-根据值删除元素" class="headerlink" title="4.根据值删除元素"></a>4.根据值删除元素</h4><p>如果你不知道要删除的元素在列表中的位置，只知道要删除的元素的值，可以使用方法<code>remove</code></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles=[<span class="string">'honda'</span>,<span class="string">'yamaha'</span>,<span class="string">'suzuki'</span>,<span class="string">'ducati'</span>]</span><br><span class="line">motorcycles.remove(<span class="string">'ducati'</span>)</span><br><span class="line">print(motorcycles)</span><br></pre></td></tr></table></figure>
 
-<h3 id="5-2-6-检查特定值是否包含在列表中"><a href="#5-2-6-检查特定值是否包含在列表中" class="headerlink" title="5.2.6  检查特定值是否包含在列表中"></a>5.2.6  检查特定值是否包含在列表中</h3><p>有时，想要检查一个特定值是否在列表中，可以使用<code>in</code>语句简单的判断</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">request_topppings=[<span class="string">'mushrooms'</span>,<span class="string">'onions'</span>,<span class="string">'pineapple'</span>]</span><br><span class="line"><span class="string">'onions'</span> <span class="keyword">in</span> request_toppings</span><br><span class="line"><span class="comment">#True</span></span><br><span class="line"><span class="string">'onion'</span> <span class="keyword">in</span> request_toppings</span><br><span class="line"><span class="comment">#False</span></span><br></pre></td></tr></table></figure>
+<p>该方法只删除第一个指定的值，如果要删除的值可能在列表中出现多次，就需要使用循环来判断是否删除了所有这样的值</p>
+<h2 id="3-3-组织列表"><a href="#3-3-组织列表" class="headerlink" title="3.3  组织列表"></a>3.3  组织列表</h2><p>在列表中，元素的排列顺序往往是无法预测的</p>
+<h3 id="3-3-1-使用方法-sort-对列表进行永久性排序"><a href="#3-3-1-使用方法-sort-对列表进行永久性排序" class="headerlink" title="3.3.1  使用方法 sort 对列表进行永久性排序"></a>3.3.1  使用方法 sort 对列表进行永久性排序</h3><p><code>sort</code>方法可以轻松的对列表进行排序，但是目前来说，我还不确定其排序遵循的所有规则</p>
+<p>而且该方法是对列表本身进行操作，会直接改变列表内部元素的排列顺序，所以是永久性排序</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars=[<span class="string">'bmw'</span>,<span class="string">'audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>]</span><br><span class="line">cars.sort()</span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure>
 
-<h3 id="5-2-7-检查特定值是否不包含在列表中"><a href="#5-2-7-检查特定值是否不包含在列表中" class="headerlink" title="5.2.7  检查特定值是否不包含在列表中"></a>5.2.7  检查特定值是否不包含在列表中</h3><p>有时，想要检查一个特定值是否不在列表中，可以使用<code>not in</code>语句简单的判断</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">request_toppings=[<span class="string">'mushrooms'</span>,<span class="string">'onions'</span>,<span class="string">'pineapple'</span>]</span><br><span class="line"><span class="string">'onions'</span> <span class="keyword">not</span> <span class="keyword">in</span> request_toppings</span><br><span class="line"><span class="comment">#False</span></span><br><span class="line"><span class="string">'onion'</span> <span class="keyword">not</span> <span class="keyword">in</span> request_toppings</span><br><span class="line"><span class="comment">#True</span></span><br></pre></td></tr></table></figure>
+<p><code>sort</code>方法默认是升序排序，如果想降序排序的话</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars=[<span class="string">'bmw'</span>,<span class="string">'audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>]</span><br><span class="line">cars.sort(reverse=<span class="literal">True</span>)</span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure>
 
-<h3 id="5-2-8-布尔表达式"><a href="#5-2-8-布尔表达式" class="headerlink" title="5.2.8  布尔表达式"></a>5.2.8  布尔表达式</h3><p>布尔表达式的结果要么是<code>True</code>要么是<code>False</code></p>
-<p>一般来说，布尔表达式都是用来作为判断的条件</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">game_active=<span class="literal">True</span></span><br><span class="line">can_edit=<span class="literal">False</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-3-2-使用函数-sorted-对列表进行临时排序"><a href="#3-3-2-使用函数-sorted-对列表进行临时排序" class="headerlink" title="3.3.2  使用函数 sorted 对列表进行临时排序"></a>3.3.2  使用函数 sorted 对列表进行临时排序</h3><p><code>sorted</code>与<code>sort</code>不同，后者是在列表本身上进行排序操作，所以是永久性排序；前者是复制出列表的一个副本，在副本上进行排序操作，并且将排好序的副本返回，所以列表本身没有变化</p>
+<p>也可以向函数<code>sorted</code>中传入参数<code>reverse=True</code>反转排序顺序</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars=[<span class="string">'bmw'</span>,<span class="string">'audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>]</span><br><span class="line">print(sorted(cars))</span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure>
 
-<p><code>True</code>与<code>False</code>其实就是布尔值，也是可以直接赋值给变量的</p>
-<h2 id="5-3-if-语句"><a href="#5-3-if-语句" class="headerlink" title="5.3  if 语句"></a>5.3  if 语句</h2><h3 id="5-3-1-简单的-if-语句"><a href="#5-3-1-简单的-if-语句" class="headerlink" title="5.3.1  简单的 if 语句"></a>5.3.1  简单的 if 语句</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> condition_test:</span><br><span class="line">  do something</span><br></pre></td></tr></table></figure>
+<h3 id="3-3-3-倒着打印列表"><a href="#3-3-3-倒着打印列表" class="headerlink" title="3.3.3  倒着打印列表"></a>3.3.3  倒着打印列表</h3><p>要反转元素的排列顺序，可调用<code>reverse</code>方法，该方法也是在列表本身上进行操作，也是永久性修改</p>
+<p>该方法没有特定的排序规则，只是反转元素的排列顺序</p>
+<p>想要将反转过顺序的列表还原，只要再调用一次该方法即可</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars=[<span class="string">'bmw'</span>,<span class="string">'audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>]</span><br><span class="line">print(cars)</span><br><span class="line">cars.reverse()</span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure>
 
-<h3 id="5-3-2-if-else-语句"><a href="#5-3-2-if-else-语句" class="headerlink" title="5.3.2  if-else 语句"></a>5.3.2  if-else 语句</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age=<span class="number">17</span></span><br><span class="line"><span class="keyword">if</span> age&gt;<span class="number">18</span>:</span><br><span class="line">  print(<span class="string">'age is bigger than 18'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  print(<span class="string">'age is not bigger than 18'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="3-3-4-确定列表的长度"><a href="#3-3-4-确定列表的长度" class="headerlink" title="3.3.4  确定列表的长度"></a>3.3.4  确定列表的长度</h3><p>使用函数<code>len</code>可快速获悉列表的长度</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars=[<span class="string">'bmw'</span>,<span class="string">'audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>]</span><br><span class="line">print(len(cars))</span><br></pre></td></tr></table></figure>
 
-<h3 id="5-3-3-if-elif-else-结构"><a href="#5-3-3-if-elif-else-结构" class="headerlink" title="5.3.3  if-elif-else 结构"></a>5.3.3  if-elif-else 结构</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age=<span class="number">12</span></span><br><span class="line"><span class="keyword">if</span> age&lt;<span class="number">4</span>:</span><br><span class="line">  print(<span class="string">'free'</span>)</span><br><span class="line"><span class="keyword">elif</span> age&lt;<span class="number">18</span>:</span><br><span class="line">  print(<span class="string">'thin'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  print(<span class="string">'wigh'</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-3-4-使用多个-elif-代码块"><a href="#5-3-4-使用多个-elif-代码块" class="headerlink" title="5.3.4  使用多个 elif 代码块"></a>5.3.4  使用多个 elif 代码块</h3><p>可以根据需要使用任意数量的<code>elif</code>语句</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age=<span class="number">12</span></span><br><span class="line"><span class="keyword">if</span> age&lt;<span class="number">4</span>:</span><br><span class="line">  price=<span class="number">0</span></span><br><span class="line"><span class="keyword">elif</span> age&lt;<span class="number">18</span>:</span><br><span class="line">  price=<span class="number">5</span></span><br><span class="line"><span class="keyword">elif</span> age&lt;<span class="number">65</span>:</span><br><span class="line">  price=<span class="number">10</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  price=<span class="number">5</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="5-3-5-省略-else-代码块"><a href="#5-3-5-省略-else-代码块" class="headerlink" title="5.3.5  省略 else 代码块"></a>5.3.5  省略 else 代码块</h3><p><code>py</code>并不要求<code>if-elif</code>结构后必须要有<code>else</code>代码块，有时可以直接用<code>elif</code>来使特定情形处理起来更清晰</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age=<span class="number">12</span></span><br><span class="line"><span class="keyword">if</span> age&lt;<span class="number">4</span>:</span><br><span class="line">  price=<span class="number">0</span></span><br><span class="line"><span class="keyword">elif</span> age&lt;<span class="number">18</span>:</span><br><span class="line">  price=<span class="number">5</span></span><br><span class="line"><span class="keyword">elif</span> age&lt;<span class="number">65</span>:</span><br><span class="line">  price=<span class="number">10</span></span><br><span class="line"><span class="keyword">elif</span> age&gt;=<span class="number">65</span>:</span><br><span class="line">  price=<span class="number">5</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="5-3-6-测试多个条件"><a href="#5-3-6-测试多个条件" class="headerlink" title="5.3.6  测试多个条件"></a>5.3.6  测试多个条件</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">request_toppings=[<span class="string">'mushrooms'</span>,<span class="string">'extra cheese'</span>]</span><br><span class="line"><span class="keyword">if</span> <span class="string">'mushrooms'</span> <span class="keyword">in</span> request_toppings:</span><br><span class="line">  print(<span class="number">1</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="string">'pepperoni'</span> <span class="keyword">in</span> request_toppings:</span><br><span class="line">  print(<span class="number">2</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="string">'extra cheese'</span> <span class="keyword">in</span> request_toppings:</span><br><span class="line">  print(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="5-4-使用-if-语句处理列表"><a href="#5-4-使用-if-语句处理列表" class="headerlink" title="5.4  使用 if 语句处理列表"></a>5.4  使用 if 语句处理列表</h2><h3 id="5-4-1-检查特殊元素"><a href="#5-4-1-检查特殊元素" class="headerlink" title="5.4.1  检查特殊元素"></a>5.4.1  检查特殊元素</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">request_toppings=[<span class="string">'mushrooms'</span>,<span class="string">'green peppers'</span>,<span class="string">'extra cheese'</span>]</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> request_toppings:</span><br><span class="line">  <span class="keyword">if</span> item==<span class="string">'green peppers'</span>:</span><br><span class="line">    print(<span class="string">'sorry,no green peppers'</span>)</span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">"it's ok!"</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-4-2-确定列表不是空的"><a href="#5-4-2-确定列表不是空的" class="headerlink" title="5.4.2  确定列表不是空的"></a>5.4.2  确定列表不是空的</h3><p>目前为止，对于列表都默认不是空的，最起码包含一个元素，但是在实际运用中，很可能会遇到空的列表，所以确定列表是否是空的，很有必要</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">request_toppings=[]</span><br><span class="line"><span class="keyword">if</span> request_toppings:</span><br><span class="line">  <span class="keyword">for</span> item <span class="keyword">in</span> request_toppings:</span><br><span class="line">    print(item)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  print(<span class="string">'request_toppings is empty'</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-4-3-使用多个列表"><a href="#5-4-3-使用多个列表" class="headerlink" title="5.4.3  使用多个列表"></a>5.4.3  使用多个列表</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">available_toppings=[<span class="string">'mushrooms'</span>,<span class="string">'olives'</span>,<span class="string">'green peppers'</span>,<span class="string">'pepperoni'</span>,<span class="string">'pineapple'</span>,<span class="string">'extra cheese'</span>]</span><br><span class="line">request_toppings=[<span class="string">'mushrooms'</span>,<span class="string">'french fries'</span>,<span class="string">'extra cheese'</span>]</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> request_toppings:</span><br><span class="line">  <span class="keyword">if</span> item <span class="keyword">in</span> available_toppings:</span><br><span class="line">    print(<span class="string">"it's ok!"</span>)</span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">'no this one'</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="5-5-设置-if-语句的格式"><a href="#5-5-设置-if-语句的格式" class="headerlink" title="5.5  设置 if 语句的格式"></a>5.5  设置 if 语句的格式</h2><p><code>PEP 8</code>建议在比较运算符<code>==</code>、<code>&lt;=</code>、<code>&gt;=</code>等两边各添加一个空格，提供代码可读性</p>
+<h2 id="3-4-使用列表时避免索引错误"><a href="#3-4-使用列表时避免索引错误" class="headerlink" title="3.4  使用列表时避免索引错误"></a>3.4  使用列表时避免索引错误</h2><p>要记住，索引始终是从 0 开始的，尽量避免索引错误</p>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -143,77 +140,6 @@
       </tags>
   </entry>
   <entry>
-    <title>3.列表简介</title>
-    <url>/2020/06/10/3.%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/</url>
-    <content><![CDATA[<h1 id="3-列表简介"><a href="#3-列表简介" class="headerlink" title="3.列表简介"></a>3.列表简介</h1><h2 id="3-1-列表是什么"><a href="#3-1-列表是什么" class="headerlink" title="3.1  列表是什么"></a>3.1  列表是什么</h2><p>列表由一系列按照特定顺序排列的元素组成，可以将任何东西放入列表，其中的元素之间可以没有任何关系；</p>
-<p>由于列表通常包含多个元素，所以常给列表指定复数名称，比如说 <code>names</code></p>
-<p>在<code>python</code>中，用方括号<code>[]</code>来表示列表，并用逗号来分隔其中的元素；</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles=[<span class="string">'trek'</span>,<span class="string">'realine'</span>,<span class="string">'ancodea'</span>]</span><br><span class="line">print(bicycles)</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-1-1-访问列表元素"><a href="#3-1-1-访问列表元素" class="headerlink" title="3.1.1  访问列表元素"></a>3.1.1  访问列表元素</h3><p>列表是有序集合，要访问列表的任何元素，只需将该元素的位置或索引告诉<code>python</code>即可</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles=[<span class="string">'trek'</span>,<span class="string">'realine'</span>,<span class="string">'ancodea'</span>]</span><br><span class="line">print(bicycles[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-1-2-索引从-0-开始而不是-1-开始"><a href="#3-1-2-索引从-0-开始而不是-1-开始" class="headerlink" title="3.1.2  索引从 0 开始而不是 1 开始"></a>3.1.2  索引从 0 开始而不是 1 开始</h3><p>大部分编程语言中，索引都是从 0 开始，这与列表操作的底层实现有关，所以访问列表中的相关元素，只需将其位置减一即可</p>
-<p><code>python</code>为访问最后一个列表元素提供了一种特殊语法，通过将索引指定为 -1，可以让其返回最后一个列表元素</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles=[<span class="string">'trek'</span>,<span class="string">'realine'</span>,<span class="string">'ancodea'</span>]</span><br><span class="line">print(bicycles[<span class="number">-1</span>])</span><br></pre></td></tr></table></figure>
-
-<p>这种约定也适用于其它负数索引，比如说 -2 返回倒数第二个列表元素，索引 -3 返回倒数第三个列表元素，以此类推；</p>
-<h3 id="3-1-3-使用列表中的各个值"><a href="#3-1-3-使用列表中的各个值" class="headerlink" title="3.1.3  使用列表中的各个值"></a>3.1.3  使用列表中的各个值</h3><p>列表中的每个元素，只要通过索引取得该元素，即可将其当做其它变量一样使用</p>
-<h2 id="3-2-修改、添加和删除元素"><a href="#3-2-修改、添加和删除元素" class="headerlink" title="3.2  修改、添加和删除元素"></a>3.2  修改、添加和删除元素</h2><p>创建的列表大多数是动态的，会随着程序的运行增删元素</p>
-<h3 id="3-2-1-修改列表元素"><a href="#3-2-1-修改列表元素" class="headerlink" title="3.2.1  修改列表元素"></a>3.2.1  修改列表元素</h3><p>修改列表元素之前，首先通过索引取到该元素，然后通过赋值语句修改</p>
-<h3 id="3-2-2-在列表中添加元素"><a href="#3-2-2-在列表中添加元素" class="headerlink" title="3.2.2  在列表中添加元素"></a>3.2.2  在列表中添加元素</h3><p><code>python</code>提供了多种在既有列表中添加新元素的方法</p>
-<h4 id="1-在列表末尾添加元素"><a href="#1-在列表末尾添加元素" class="headerlink" title="1.在列表末尾添加元素"></a>1.在列表末尾添加元素</h4><p>通过<code>append</code>方法可以将元素附加到列表末尾，而不影响列表中的其它元素</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles=[]</span><br><span class="line">motorcycles.append(<span class="string">'honda'</span>)</span><br><span class="line">motorcycles.append(<span class="string">'yamaha'</span>)</span><br><span class="line">motorcycles.append(<span class="string">'suzuki'</span>)</span><br><span class="line">print(motorcycles)</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-在列表中插入元素"><a href="#2-在列表中插入元素" class="headerlink" title="2.在列表中插入元素"></a>2.在列表中插入元素</h4><p>通过<code>insert</code>方法可以在列表中的任何位置添加新元素；为此，你需要指定新元素的索引与值</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles=[<span class="string">'honda'</span>,<span class="string">'yamaha'</span>,<span class="string">'suzuki'</span>]</span><br><span class="line">motorcycles.insert(<span class="number">0</span>,<span class="string">'ducati'</span>)</span><br><span class="line">print(motorcycles)</span><br></pre></td></tr></table></figure>
-
-<p>在上述例子中，<code>ducati</code>值被插入到了列表开头，方法<code>insert</code>在索引 0 处添加空间，并将新元素存储到这个地方，这种操作将列表中既有的每个元素都右移一个位置</p>
-<h3 id="3-2-3-从列表中删除元素"><a href="#3-2-3-从列表中删除元素" class="headerlink" title="3.2.3  从列表中删除元素"></a>3.2.3  从列表中删除元素</h3><h4 id="1-使用-del-语句删除元素"><a href="#1-使用-del-语句删除元素" class="headerlink" title="1.使用 del 语句删除元素"></a>1.使用 del 语句删除元素</h4><p>如果知道元素在列表中的位置，可以直接通过<code>del</code>语句删除该元素</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles=[<span class="string">'honda'</span>,<span class="string">'yamaha'</span>,<span class="string">'suzuki'</span>]</span><br><span class="line"><span class="keyword">del</span> motorcycles[<span class="number">0</span>]</span><br><span class="line"><span class="keyword">del</span> motorcycles[<span class="number">1</span>]</span><br><span class="line">print(motorcycles)</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-使用方法-pop-删除元素"><a href="#2-使用方法-pop-删除元素" class="headerlink" title="2.使用方法 pop 删除元素"></a>2.使用方法 pop 删除元素</h4><p><code>pop</code> 方法可以删除列表末尾的值，并让你能够接着使用它；列表就像一个栈，删除列表末尾的元素就像是弹出栈顶元素</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles=[<span class="string">'honda'</span>,<span class="string">'yamaha'</span>,<span class="string">'suzuki'</span>]</span><br><span class="line">print(motorcycles)</span><br><span class="line">popped_motorcycles=motorcycles.pop()</span><br><span class="line">print(motorcycles)</span><br><span class="line">print(popped_motorcycles)</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-弹出列表中任何位置的元素"><a href="#3-弹出列表中任何位置的元素" class="headerlink" title="3.弹出列表中任何位置的元素"></a>3.弹出列表中任何位置的元素</h4><p>实际上，可以利用<code>pop</code>方法来删除列表中任何位置的元素，只需要给<code>pop</code>方法传参，即要删除的元素在列表中的索引即可</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles=[<span class="string">'honda'</span>,<span class="string">'yamaha'</span>,<span class="string">'suzuki'</span>]</span><br><span class="line">first_owned=motorcycles.pop(<span class="number">0</span>)</span><br><span class="line">print(first_owned)</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-根据值删除元素"><a href="#4-根据值删除元素" class="headerlink" title="4.根据值删除元素"></a>4.根据值删除元素</h4><p>如果你不知道要删除的元素在列表中的位置，只知道要删除的元素的值，可以使用方法<code>remove</code></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles=[<span class="string">'honda'</span>,<span class="string">'yamaha'</span>,<span class="string">'suzuki'</span>,<span class="string">'ducati'</span>]</span><br><span class="line">motorcycles.remove(<span class="string">'ducati'</span>)</span><br><span class="line">print(motorcycles)</span><br></pre></td></tr></table></figure>
-
-<p>该方法只删除第一个指定的值，如果要删除的值可能在列表中出现多次，就需要使用循环来判断是否删除了所有这样的值</p>
-<h2 id="3-3-组织列表"><a href="#3-3-组织列表" class="headerlink" title="3.3  组织列表"></a>3.3  组织列表</h2><p>在列表中，元素的排列顺序往往是无法预测的</p>
-<h3 id="3-3-1-使用方法-sort-对列表进行永久性排序"><a href="#3-3-1-使用方法-sort-对列表进行永久性排序" class="headerlink" title="3.3.1  使用方法 sort 对列表进行永久性排序"></a>3.3.1  使用方法 sort 对列表进行永久性排序</h3><p><code>sort</code>方法可以轻松的对列表进行排序，但是目前来说，我还不确定其排序遵循的所有规则</p>
-<p>而且该方法是对列表本身进行操作，会直接改变列表内部元素的排列顺序，所以是永久性排序</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars=[<span class="string">'bmw'</span>,<span class="string">'audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>]</span><br><span class="line">cars.sort()</span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure>
-
-<p><code>sort</code>方法默认是升序排序，如果想降序排序的话</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars=[<span class="string">'bmw'</span>,<span class="string">'audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>]</span><br><span class="line">cars.sort(reverse=<span class="literal">True</span>)</span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-3-2-使用函数-sorted-对列表进行临时排序"><a href="#3-3-2-使用函数-sorted-对列表进行临时排序" class="headerlink" title="3.3.2  使用函数 sorted 对列表进行临时排序"></a>3.3.2  使用函数 sorted 对列表进行临时排序</h3><p><code>sorted</code>与<code>sort</code>不同，后者是在列表本身上进行排序操作，所以是永久性排序；前者是复制出列表的一个副本，在副本上进行排序操作，并且将排好序的副本返回，所以列表本身没有变化</p>
-<p>也可以向函数<code>sorted</code>中传入参数<code>reverse=True</code>反转排序顺序</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars=[<span class="string">'bmw'</span>,<span class="string">'audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>]</span><br><span class="line">print(sorted(cars))</span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-3-3-倒着打印列表"><a href="#3-3-3-倒着打印列表" class="headerlink" title="3.3.3  倒着打印列表"></a>3.3.3  倒着打印列表</h3><p>要反转元素的排列顺序，可调用<code>reverse</code>方法，该方法也是在列表本身上进行操作，也是永久性修改</p>
-<p>该方法没有特定的排序规则，只是反转元素的排列顺序</p>
-<p>想要将反转过顺序的列表还原，只要再调用一次该方法即可</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars=[<span class="string">'bmw'</span>,<span class="string">'audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>]</span><br><span class="line">print(cars)</span><br><span class="line">cars.reverse()</span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-3-4-确定列表的长度"><a href="#3-3-4-确定列表的长度" class="headerlink" title="3.3.4  确定列表的长度"></a>3.3.4  确定列表的长度</h3><p>使用函数<code>len</code>可快速获悉列表的长度</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars=[<span class="string">'bmw'</span>,<span class="string">'audi'</span>,<span class="string">'toyota'</span>,<span class="string">'subaru'</span>]</span><br><span class="line">print(len(cars))</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-4-使用列表时避免索引错误"><a href="#3-4-使用列表时避免索引错误" class="headerlink" title="3.4  使用列表时避免索引错误"></a>3.4  使用列表时避免索引错误</h2><p>要记住，索引始终是从 0 开始的，尽量避免索引错误</p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Python编程从入门到实践</tag>
-        <tag>读书笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>4.操作列表</title>
     <url>/2020/06/11/4.%E6%93%8D%E4%BD%9C%E5%88%97%E8%A1%A8/</url>
     <content><![CDATA[<h1 id="4-操作列表"><a href="#4-操作列表" class="headerlink" title="4.操作列表"></a>4.操作列表</h1><h2 id="4-1-遍历整个列表"><a href="#4-1-遍历整个列表" class="headerlink" title="4.1  遍历整个列表"></a>4.1  遍历整个列表</h2><p>对列表来说，经常会对列表中的每个元素执行相同的操作，这时候，可以采用<code>for</code>循环来遍历列表中的每一个元素</p>
@@ -278,6 +204,80 @@
 <p>但其实这不是不可逾越的红线，但多人协作时必须设置一个统一值</p>
 <h3 id="4-6-4-空行"><a href="#4-6-4-空行" class="headerlink" title="4.6.4  空行"></a>4.6.4  空行</h3><p>空行也与行长一样，不是不可逾越的红线，但是也要统一</p>
 <h3 id="4-6-5-其它格式设置指南"><a href="#4-6-5-其它格式设置指南" class="headerlink" title="4.6.5  其它格式设置指南"></a>4.6.5  其它格式设置指南</h3><p>还有一些，目前来说用不到，等后期涉及到更复杂的<code>py</code>结构，我们再来了解</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Python编程从入门到实践</tag>
+        <tag>读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>5.if语句</title>
+    <url>/2020/06/16/5.if%E8%AF%AD%E5%8F%A5/</url>
+    <content><![CDATA[<h1 id="5-if语句"><a href="#5-if语句" class="headerlink" title="5.if语句"></a>5.if语句</h1><h2 id="5-1-一个简单示例"><a href="#5-1-一个简单示例" class="headerlink" title="5.1  一个简单示例"></a>5.1  一个简单示例</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars=[<span class="string">'audi'</span>,<span class="string">'bmw'</span>,<span class="string">'subaru'</span>,<span class="string">'toyata'</span>]</span><br><span class="line"><span class="keyword">for</span> car <span class="keyword">in</span> cars:</span><br><span class="line">  <span class="keyword">if</span> car==<span class="string">'bmw'</span>:</span><br><span class="line">    print(car.upper())</span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    print(car.title())</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-2-条件测试"><a href="#5-2-条件测试" class="headerlink" title="5.2  条件测试"></a>5.2  条件测试</h2><p>每句<code>if</code>语句的核心都是一个值为<code>True</code>或者<code>False</code>的表达式，这种表达式被称为条件测试；</p>
+<p><code>py</code>根据条件测试的值为<code>True</code>或者<code>False</code>来决定是否执行<code>if</code>语句中的代码，如果是<code>True</code>则执行，如果是<code>False</code>则忽略跳过</p>
+<h3 id="5-2-1-检查是否相等"><a href="#5-2-1-检查是否相等" class="headerlink" title="5.2.1  检查是否相等"></a>5.2.1  检查是否相等</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">car=<span class="string">'audi'</span></span><br><span class="line">car==<span class="string">'audi'</span></span><br></pre></td></tr></table></figure>
+
+<p><code>=</code>是赋值语句，<code>==</code>是判断语句</p>
+<h3 id="5-2-2-检查是否相等时不考虑大小写"><a href="#5-2-2-检查是否相等时不考虑大小写" class="headerlink" title="5.2.2  检查是否相等时不考虑大小写"></a>5.2.2  检查是否相等时不考虑大小写</h3><p><code>py</code>中检查是否相等时会区分大小写</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">car=<span class="string">'Audi'</span></span><br><span class="line">car==<span class="string">'audi'</span></span><br><span class="line"><span class="comment">#False</span></span><br></pre></td></tr></table></figure>
+
+<p>但是可以通过<code>lower</code>语句来忽略大小写</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">car=<span class="string">'Audi'</span></span><br><span class="line">car.lower()==<span class="string">'audi'</span></span><br><span class="line"><span class="comment">#True</span></span><br></pre></td></tr></table></figure>
+
+<p><code>lower</code>不会改变原有值，只是复制出一个转换为小写的副本出来</p>
+<h3 id="5-2-3-检查是否不相等"><a href="#5-2-3-检查是否不相等" class="headerlink" title="5.2.3  检查是否不相等"></a>5.2.3  检查是否不相等</h3><p>要判断两个值是否不等，可使用<code>!=</code>语句</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">request_topping=<span class="string">'mushrooms'</span></span><br><span class="line"><span class="keyword">if</span> request_topping!=<span class="string">'anchovies'</span>:</span><br><span class="line">  print(<span class="string">'Hold the anchovies'</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-2-4-比较数字"><a href="#5-2-4-比较数字" class="headerlink" title="5.2.4  比较数字"></a>5.2.4  比较数字</h3><p>像上面一样，数字也是可以比较相等或者不相等</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age=<span class="number">17</span></span><br><span class="line">age==<span class="number">17</span></span><br><span class="line">age!=<span class="number">17</span></span><br></pre></td></tr></table></figure>
+
+<p>也可以进行一些数学比较，比如小于，小于等于，大于，大于等于</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age=<span class="number">17</span></span><br><span class="line">age&gt;<span class="number">10</span></span><br><span class="line">age&gt;=<span class="number">10</span></span><br><span class="line">age&lt;<span class="number">20</span></span><br><span class="line">age&lt;=<span class="number">20</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-2-5-检查多个条件"><a href="#5-2-5-检查多个条件" class="headerlink" title="5.2.5  检查多个条件"></a>5.2.5  检查多个条件</h3><p>如果想要同时检查多个条件，有时你需要一个表达式同时满足两个条件时才会执行相应的操作，有时只需要满足其中一个条件即可执行相应的操作，<code>and</code>和<code>or</code>语句可以帮助你</p>
+<h4 id="1-使用-and-检查多个条件"><a href="#1-使用-and-检查多个条件" class="headerlink" title="1.  使用 and 检查多个条件"></a>1.  使用 and 检查多个条件</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age=<span class="number">10</span></span><br><span class="line">age&gt;<span class="number">9</span> <span class="keyword">and</span> age&lt;<span class="number">20</span></span><br><span class="line"><span class="comment">#只有当两个表达式都为True时，整体才为True</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-使用-or-检查多个条件"><a href="#2-使用-or-检查多个条件" class="headerlink" title="2.  使用 or 检查多个条件"></a>2.  使用 or 检查多个条件</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age=<span class="number">10</span></span><br><span class="line">age&gt;<span class="number">11</span> <span class="keyword">or</span> age&lt;<span class="number">20</span></span><br><span class="line"><span class="comment">#两个表达式只要有一个是True，整体就为True</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-2-6-检查特定值是否包含在列表中"><a href="#5-2-6-检查特定值是否包含在列表中" class="headerlink" title="5.2.6  检查特定值是否包含在列表中"></a>5.2.6  检查特定值是否包含在列表中</h3><p>有时，想要检查一个特定值是否在列表中，可以使用<code>in</code>语句简单的判断</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">request_topppings=[<span class="string">'mushrooms'</span>,<span class="string">'onions'</span>,<span class="string">'pineapple'</span>]</span><br><span class="line"><span class="string">'onions'</span> <span class="keyword">in</span> request_toppings</span><br><span class="line"><span class="comment">#True</span></span><br><span class="line"><span class="string">'onion'</span> <span class="keyword">in</span> request_toppings</span><br><span class="line"><span class="comment">#False</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-2-7-检查特定值是否不包含在列表中"><a href="#5-2-7-检查特定值是否不包含在列表中" class="headerlink" title="5.2.7  检查特定值是否不包含在列表中"></a>5.2.7  检查特定值是否不包含在列表中</h3><p>有时，想要检查一个特定值是否不在列表中，可以使用<code>not in</code>语句简单的判断</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">request_toppings=[<span class="string">'mushrooms'</span>,<span class="string">'onions'</span>,<span class="string">'pineapple'</span>]</span><br><span class="line"><span class="string">'onions'</span> <span class="keyword">not</span> <span class="keyword">in</span> request_toppings</span><br><span class="line"><span class="comment">#False</span></span><br><span class="line"><span class="string">'onion'</span> <span class="keyword">not</span> <span class="keyword">in</span> request_toppings</span><br><span class="line"><span class="comment">#True</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-2-8-布尔表达式"><a href="#5-2-8-布尔表达式" class="headerlink" title="5.2.8  布尔表达式"></a>5.2.8  布尔表达式</h3><p>布尔表达式的结果要么是<code>True</code>要么是<code>False</code></p>
+<p>一般来说，布尔表达式都是用来作为判断的条件</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">game_active=<span class="literal">True</span></span><br><span class="line">can_edit=<span class="literal">False</span></span><br></pre></td></tr></table></figure>
+
+<p><code>True</code>与<code>False</code>其实就是布尔值，也是可以直接赋值给变量的</p>
+<h2 id="5-3-if-语句"><a href="#5-3-if-语句" class="headerlink" title="5.3  if 语句"></a>5.3  if 语句</h2><h3 id="5-3-1-简单的-if-语句"><a href="#5-3-1-简单的-if-语句" class="headerlink" title="5.3.1  简单的 if 语句"></a>5.3.1  简单的 if 语句</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> condition_test:</span><br><span class="line">  do something</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-3-2-if-else-语句"><a href="#5-3-2-if-else-语句" class="headerlink" title="5.3.2  if-else 语句"></a>5.3.2  if-else 语句</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age=<span class="number">17</span></span><br><span class="line"><span class="keyword">if</span> age&gt;<span class="number">18</span>:</span><br><span class="line">  print(<span class="string">'age is bigger than 18'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  print(<span class="string">'age is not bigger than 18'</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-3-3-if-elif-else-结构"><a href="#5-3-3-if-elif-else-结构" class="headerlink" title="5.3.3  if-elif-else 结构"></a>5.3.3  if-elif-else 结构</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age=<span class="number">12</span></span><br><span class="line"><span class="keyword">if</span> age&lt;<span class="number">4</span>:</span><br><span class="line">  print(<span class="string">'free'</span>)</span><br><span class="line"><span class="keyword">elif</span> age&lt;<span class="number">18</span>:</span><br><span class="line">  print(<span class="string">'thin'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  print(<span class="string">'wigh'</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-3-4-使用多个-elif-代码块"><a href="#5-3-4-使用多个-elif-代码块" class="headerlink" title="5.3.4  使用多个 elif 代码块"></a>5.3.4  使用多个 elif 代码块</h3><p>可以根据需要使用任意数量的<code>elif</code>语句</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age=<span class="number">12</span></span><br><span class="line"><span class="keyword">if</span> age&lt;<span class="number">4</span>:</span><br><span class="line">  price=<span class="number">0</span></span><br><span class="line"><span class="keyword">elif</span> age&lt;<span class="number">18</span>:</span><br><span class="line">  price=<span class="number">5</span></span><br><span class="line"><span class="keyword">elif</span> age&lt;<span class="number">65</span>:</span><br><span class="line">  price=<span class="number">10</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  price=<span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-3-5-省略-else-代码块"><a href="#5-3-5-省略-else-代码块" class="headerlink" title="5.3.5  省略 else 代码块"></a>5.3.5  省略 else 代码块</h3><p><code>py</code>并不要求<code>if-elif</code>结构后必须要有<code>else</code>代码块，有时可以直接用<code>elif</code>来使特定情形处理起来更清晰</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age=<span class="number">12</span></span><br><span class="line"><span class="keyword">if</span> age&lt;<span class="number">4</span>:</span><br><span class="line">  price=<span class="number">0</span></span><br><span class="line"><span class="keyword">elif</span> age&lt;<span class="number">18</span>:</span><br><span class="line">  price=<span class="number">5</span></span><br><span class="line"><span class="keyword">elif</span> age&lt;<span class="number">65</span>:</span><br><span class="line">  price=<span class="number">10</span></span><br><span class="line"><span class="keyword">elif</span> age&gt;=<span class="number">65</span>:</span><br><span class="line">  price=<span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-3-6-测试多个条件"><a href="#5-3-6-测试多个条件" class="headerlink" title="5.3.6  测试多个条件"></a>5.3.6  测试多个条件</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">request_toppings=[<span class="string">'mushrooms'</span>,<span class="string">'extra cheese'</span>]</span><br><span class="line"><span class="keyword">if</span> <span class="string">'mushrooms'</span> <span class="keyword">in</span> request_toppings:</span><br><span class="line">  print(<span class="number">1</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="string">'pepperoni'</span> <span class="keyword">in</span> request_toppings:</span><br><span class="line">  print(<span class="number">2</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="string">'extra cheese'</span> <span class="keyword">in</span> request_toppings:</span><br><span class="line">  print(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-4-使用-if-语句处理列表"><a href="#5-4-使用-if-语句处理列表" class="headerlink" title="5.4  使用 if 语句处理列表"></a>5.4  使用 if 语句处理列表</h2><h3 id="5-4-1-检查特殊元素"><a href="#5-4-1-检查特殊元素" class="headerlink" title="5.4.1  检查特殊元素"></a>5.4.1  检查特殊元素</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">request_toppings=[<span class="string">'mushrooms'</span>,<span class="string">'green peppers'</span>,<span class="string">'extra cheese'</span>]</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> request_toppings:</span><br><span class="line">  <span class="keyword">if</span> item==<span class="string">'green peppers'</span>:</span><br><span class="line">    print(<span class="string">'sorry,no green peppers'</span>)</span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">"it's ok!"</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-4-2-确定列表不是空的"><a href="#5-4-2-确定列表不是空的" class="headerlink" title="5.4.2  确定列表不是空的"></a>5.4.2  确定列表不是空的</h3><p>目前为止，对于列表都默认不是空的，最起码包含一个元素，但是在实际运用中，很可能会遇到空的列表，所以确定列表是否是空的，很有必要</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">request_toppings=[]</span><br><span class="line"><span class="keyword">if</span> request_toppings:</span><br><span class="line">  <span class="keyword">for</span> item <span class="keyword">in</span> request_toppings:</span><br><span class="line">    print(item)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  print(<span class="string">'request_toppings is empty'</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-4-3-使用多个列表"><a href="#5-4-3-使用多个列表" class="headerlink" title="5.4.3  使用多个列表"></a>5.4.3  使用多个列表</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">available_toppings=[<span class="string">'mushrooms'</span>,<span class="string">'olives'</span>,<span class="string">'green peppers'</span>,<span class="string">'pepperoni'</span>,<span class="string">'pineapple'</span>,<span class="string">'extra cheese'</span>]</span><br><span class="line">request_toppings=[<span class="string">'mushrooms'</span>,<span class="string">'french fries'</span>,<span class="string">'extra cheese'</span>]</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> request_toppings:</span><br><span class="line">  <span class="keyword">if</span> item <span class="keyword">in</span> available_toppings:</span><br><span class="line">    print(<span class="string">"it's ok!"</span>)</span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">'no this one'</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-5-设置-if-语句的格式"><a href="#5-5-设置-if-语句的格式" class="headerlink" title="5.5  设置 if 语句的格式"></a>5.5  设置 if 语句的格式</h2><p><code>PEP 8</code>建议在比较运算符<code>==</code>、<code>&lt;=</code>、<code>&gt;=</code>等两边各添加一个空格，提供代码可读性</p>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -643,61 +643,6 @@
       </tags>
   </entry>
   <entry>
-    <title>遍历对象键值的三种方法</title>
-    <url>/2019/10/08/%E9%81%8D%E5%8E%86%E5%AF%B9%E8%B1%A1%E9%94%AE%E5%80%BC%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h3 id="遍历对象属性的三种方法"><a href="#遍历对象属性的三种方法" class="headerlink" title="遍历对象属性的三种方法"></a>遍历对象属性的三种方法</h3><p>补充：下面三种方法，不光可以遍历obj，还可以遍历arr和str，而arr和str中的属性就是它们的索引（字符串类型），与属性相对应的值就是对应索引下的值！！！</p>
-<h5 id="1-for…in…"><a href="#1-for…in…" class="headerlink" title="1.  for…in…"></a>1.  for…in…</h5><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="string">"name"</span>:<span class="string">"tom"</span>,<span class="string">"sex"</span>:<span class="string">"male"</span>&#125;；</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">"age"</span>, &#123;<span class="attr">value</span>:<span class="string">"18"</span>, <span class="attr">enumerable</span>:<span class="literal">false</span>&#125;);</span><br><span class="line"><span class="comment">//增加不可枚举的属性age</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.protoPer1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="string">"name is tom"</span>);&#125;;</span><br><span class="line"><span class="comment">//通过原型链增加属性，为一个函数</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.protoPer2 = <span class="number">2</span>;</span><br><span class="line"><span class="comment">//通过原型链增加属性，为一个整型值2</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> prop <span class="keyword">in</span> obj)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(prop);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//可以遍历出对象的所有可枚举属性，包括自身属性，继承自原型的属性，因为上面的age属性不可枚举，所以输出不了</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="2-Object-keys"><a href="#2-Object-keys" class="headerlink" title="2.  Object.keys"></a>2.  Object.keys</h5><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="string">"name"</span>:<span class="string">"tom"</span>,<span class="string">"sex"</span>:<span class="string">"male"</span>&#125;；</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">"age"</span>, &#123;<span class="attr">value</span>:<span class="string">"18"</span>, <span class="attr">enumerable</span>:<span class="literal">false</span>&#125;);</span><br><span class="line"><span class="comment">//增加不可枚举的属性age</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.protoPer1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="string">"name is tom"</span>);&#125;;</span><br><span class="line"><span class="comment">//通过原型链增加属性，为一个函数</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.protoPer2 = <span class="number">2</span>;</span><br><span class="line"><span class="comment">//通过原型链增加属性，为一个整型值2</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(obj));</span><br><span class="line"><span class="comment">//该方法返回一个数组，元素为遍历出的属性，该方法可以遍历出对象自身的可枚举属性，不包括继承自原型的属性和不可枚举的属性</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="3-Object-getOwnProperty"><a href="#3-Object-getOwnProperty" class="headerlink" title="3.  Object.getOwnProperty"></a>3.  Object.getOwnProperty</h5><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="string">"name"</span>:<span class="string">"tom"</span>,<span class="string">"sex"</span>:<span class="string">"male"</span>&#125;；</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">"age"</span>, &#123;<span class="attr">value</span>:<span class="string">"18"</span>, <span class="attr">enumerable</span>:<span class="literal">false</span>&#125;);</span><br><span class="line"><span class="comment">//增加不可枚举的属性age</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.protoPer1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="string">"name is tom"</span>);&#125;;</span><br><span class="line"><span class="comment">//通过原型链增加属性，为一个函数</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.protoPer2 = <span class="number">2</span>;</span><br><span class="line"><span class="comment">//通过原型链增加属性，为一个整型值2</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.getOwnPropertyNames(obj));</span><br><span class="line"><span class="comment">//该方法可以遍历出对象自身的属性，包括可枚举和不可枚举的属性，但是不包括继承自原型的属性</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>读书笔记</tag>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>预编译</title>
-    <url>/2019/10/08/%E9%A2%84%E7%BC%96%E8%AF%91/</url>
-    <content><![CDATA[<h1 id="预编译"><a href="#预编译" class="headerlink" title="预编译"></a>预编译</h1><p><code>JavaScript</code>属于单线程的解释型语言，单线程暂且不论；</p>
-<p>解释型语言就是读一行执行一行的意思；</p>
-<p>不过在执行之前，会有语法分析和预编译两个过程；</p>
-<p>语法分析意思就是在执行代码之前会先扫描代码一遍，但是不执行，只是为了检测有没有什么语法错误等等；</p>
-<h2 id="预编译（预编译发生在函数执行的前一刻）"><a href="#预编译（预编译发生在函数执行的前一刻）" class="headerlink" title="预编译（预编译发生在函数执行的前一刻）"></a>预编译（预编译发生在函数执行的前一刻）</h2><h3 id="函数声明整体提升："><a href="#函数声明整体提升：" class="headerlink" title="函数声明整体提升："></a>函数声明整体提升：</h3><p>如果写了一个函数声明，系统会把其提升到逻辑的最顶部，所以无论在哪里调用，实际上都是在其下面调用；</p>
-<h3 id="变量声明提升："><a href="#变量声明提升：" class="headerlink" title="变量声明提升："></a>变量声明提升：</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a=<span class="number">123</span>；</span><br></pre></td></tr></table></figure>
-
-<p><code>var a</code>叫做变量声明；</p>
-<p><code>a=123；</code>叫做变量赋值；</p>
-<p>只要声明了，就会提升到顶部，但是在没赋值之前，输出的值为<code>undefined</code>；</p>
-<h3 id="函数体内预编译的四部曲："><a href="#函数体内预编译的四部曲：" class="headerlink" title="函数体内预编译的四部曲："></a>函数体内预编译的四部曲：</h3><p>1.创建<code>AO</code>对象 <code>Activation Object</code>，即执行上下文；</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">AO&#123;</span><br><span class="line">  a:<span class="literal">undefined</span>,</span><br><span class="line">  b:<span class="literal">undefined</span>,</span><br><span class="line">  d:<span class="literal">undefined</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>2.找形参和变量声明，将变量和形参作为<code>AO</code>的属性挂上去，值为<code>undefined</code>；</p>
-<p>3.将实参值与形参相统一，就是将实参的值放到形参中去；</p>
-<p>4.在函数体中找函数声明，将函数名作为<code>AO</code>的属性挂上去，将函数的值（也就是函数体）挂在<code>AO</code>里的对应函数名上，如果之前变量或形参存在同名属性，这时都会被覆盖；</p>
-<p>注意：函数执行时，都会从<code>AO</code>中找对应属性和方法；</p>
-<h3 id="全局上的预编译（GO-window）"><a href="#全局上的预编译（GO-window）" class="headerlink" title="全局上的预编译（GO===window）"></a>全局上的预编译（GO===window）</h3><p>1.创建<code>GO</code>对象 <code>Global Object</code>；</p>
-<p>2.变量声明提升，赋值<code>undefined</code>；</p>
-<p>3.函数声明提升，赋值；</p>
-<h2 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h2><p>一切变量未经声明，就直接赋值，就属于全局变量，即全局对象<code>window</code>的变量；</p>
-<p>一切声明的全局变量，归window所有；</p>
-<p><code>window</code>就是全局的作用域；</p>
-<p>作用域其实也是一个对象；</p>
-]]></content>
-      <categories>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>读书笔记</tag>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JavaScript知识点补充1</title>
     <url>/2019/10/08/JavaScript%E7%9F%A5%E8%AF%86%E7%82%B9%E8%A1%A5%E5%85%851/</url>
     <content><![CDATA[<h4 id="1-构造函数内部原理"><a href="#1-构造函数内部原理" class="headerlink" title="1.构造函数内部原理"></a>1.构造函数内部原理</h4><p>构造函数用new关键字调用时相当于在构造函数内部隐式的执行三步骤：</p>
@@ -823,6 +768,61 @@
 
 
 
+]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>读书笔记</tag>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>遍历对象键值的三种方法</title>
+    <url>/2019/10/08/%E9%81%8D%E5%8E%86%E5%AF%B9%E8%B1%A1%E9%94%AE%E5%80%BC%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h3 id="遍历对象属性的三种方法"><a href="#遍历对象属性的三种方法" class="headerlink" title="遍历对象属性的三种方法"></a>遍历对象属性的三种方法</h3><p>补充：下面三种方法，不光可以遍历obj，还可以遍历arr和str，而arr和str中的属性就是它们的索引（字符串类型），与属性相对应的值就是对应索引下的值！！！</p>
+<h5 id="1-for…in…"><a href="#1-for…in…" class="headerlink" title="1.  for…in…"></a>1.  for…in…</h5><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="string">"name"</span>:<span class="string">"tom"</span>,<span class="string">"sex"</span>:<span class="string">"male"</span>&#125;；</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">"age"</span>, &#123;<span class="attr">value</span>:<span class="string">"18"</span>, <span class="attr">enumerable</span>:<span class="literal">false</span>&#125;);</span><br><span class="line"><span class="comment">//增加不可枚举的属性age</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.protoPer1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="string">"name is tom"</span>);&#125;;</span><br><span class="line"><span class="comment">//通过原型链增加属性，为一个函数</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.protoPer2 = <span class="number">2</span>;</span><br><span class="line"><span class="comment">//通过原型链增加属性，为一个整型值2</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> prop <span class="keyword">in</span> obj)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(prop);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//可以遍历出对象的所有可枚举属性，包括自身属性，继承自原型的属性，因为上面的age属性不可枚举，所以输出不了</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="2-Object-keys"><a href="#2-Object-keys" class="headerlink" title="2.  Object.keys"></a>2.  Object.keys</h5><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="string">"name"</span>:<span class="string">"tom"</span>,<span class="string">"sex"</span>:<span class="string">"male"</span>&#125;；</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">"age"</span>, &#123;<span class="attr">value</span>:<span class="string">"18"</span>, <span class="attr">enumerable</span>:<span class="literal">false</span>&#125;);</span><br><span class="line"><span class="comment">//增加不可枚举的属性age</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.protoPer1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="string">"name is tom"</span>);&#125;;</span><br><span class="line"><span class="comment">//通过原型链增加属性，为一个函数</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.protoPer2 = <span class="number">2</span>;</span><br><span class="line"><span class="comment">//通过原型链增加属性，为一个整型值2</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(obj));</span><br><span class="line"><span class="comment">//该方法返回一个数组，元素为遍历出的属性，该方法可以遍历出对象自身的可枚举属性，不包括继承自原型的属性和不可枚举的属性</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="3-Object-getOwnProperty"><a href="#3-Object-getOwnProperty" class="headerlink" title="3.  Object.getOwnProperty"></a>3.  Object.getOwnProperty</h5><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="string">"name"</span>:<span class="string">"tom"</span>,<span class="string">"sex"</span>:<span class="string">"male"</span>&#125;；</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">"age"</span>, &#123;<span class="attr">value</span>:<span class="string">"18"</span>, <span class="attr">enumerable</span>:<span class="literal">false</span>&#125;);</span><br><span class="line"><span class="comment">//增加不可枚举的属性age</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.protoPer1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="string">"name is tom"</span>);&#125;;</span><br><span class="line"><span class="comment">//通过原型链增加属性，为一个函数</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.protoPer2 = <span class="number">2</span>;</span><br><span class="line"><span class="comment">//通过原型链增加属性，为一个整型值2</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.getOwnPropertyNames(obj));</span><br><span class="line"><span class="comment">//该方法可以遍历出对象自身的属性，包括可枚举和不可枚举的属性，但是不包括继承自原型的属性</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>读书笔记</tag>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>预编译</title>
+    <url>/2019/10/08/%E9%A2%84%E7%BC%96%E8%AF%91/</url>
+    <content><![CDATA[<h1 id="预编译"><a href="#预编译" class="headerlink" title="预编译"></a>预编译</h1><p><code>JavaScript</code>属于单线程的解释型语言，单线程暂且不论；</p>
+<p>解释型语言就是读一行执行一行的意思；</p>
+<p>不过在执行之前，会有语法分析和预编译两个过程；</p>
+<p>语法分析意思就是在执行代码之前会先扫描代码一遍，但是不执行，只是为了检测有没有什么语法错误等等；</p>
+<h2 id="预编译（预编译发生在函数执行的前一刻）"><a href="#预编译（预编译发生在函数执行的前一刻）" class="headerlink" title="预编译（预编译发生在函数执行的前一刻）"></a>预编译（预编译发生在函数执行的前一刻）</h2><h3 id="函数声明整体提升："><a href="#函数声明整体提升：" class="headerlink" title="函数声明整体提升："></a>函数声明整体提升：</h3><p>如果写了一个函数声明，系统会把其提升到逻辑的最顶部，所以无论在哪里调用，实际上都是在其下面调用；</p>
+<h3 id="变量声明提升："><a href="#变量声明提升：" class="headerlink" title="变量声明提升："></a>变量声明提升：</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a=<span class="number">123</span>；</span><br></pre></td></tr></table></figure>
+
+<p><code>var a</code>叫做变量声明；</p>
+<p><code>a=123；</code>叫做变量赋值；</p>
+<p>只要声明了，就会提升到顶部，但是在没赋值之前，输出的值为<code>undefined</code>；</p>
+<h3 id="函数体内预编译的四部曲："><a href="#函数体内预编译的四部曲：" class="headerlink" title="函数体内预编译的四部曲："></a>函数体内预编译的四部曲：</h3><p>1.创建<code>AO</code>对象 <code>Activation Object</code>，即执行上下文；</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">AO&#123;</span><br><span class="line">  a:<span class="literal">undefined</span>,</span><br><span class="line">  b:<span class="literal">undefined</span>,</span><br><span class="line">  d:<span class="literal">undefined</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.找形参和变量声明，将变量和形参作为<code>AO</code>的属性挂上去，值为<code>undefined</code>；</p>
+<p>3.将实参值与形参相统一，就是将实参的值放到形参中去；</p>
+<p>4.在函数体中找函数声明，将函数名作为<code>AO</code>的属性挂上去，将函数的值（也就是函数体）挂在<code>AO</code>里的对应函数名上，如果之前变量或形参存在同名属性，这时都会被覆盖；</p>
+<p>注意：函数执行时，都会从<code>AO</code>中找对应属性和方法；</p>
+<h3 id="全局上的预编译（GO-window）"><a href="#全局上的预编译（GO-window）" class="headerlink" title="全局上的预编译（GO===window）"></a>全局上的预编译（GO===window）</h3><p>1.创建<code>GO</code>对象 <code>Global Object</code>；</p>
+<p>2.变量声明提升，赋值<code>undefined</code>；</p>
+<p>3.函数声明提升，赋值；</p>
+<h2 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h2><p>一切变量未经声明，就直接赋值，就属于全局变量，即全局对象<code>window</code>的变量；</p>
+<p>一切声明的全局变量，归window所有；</p>
+<p><code>window</code>就是全局的作用域；</p>
+<p>作用域其实也是一个对象；</p>
 ]]></content>
       <categories>
         <category>JavaScript</category>
